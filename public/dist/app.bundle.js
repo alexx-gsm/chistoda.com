@@ -9624,7 +9624,7 @@ var Content = function (_Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Content.__proto__ || Object.getPrototypeOf(Content)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            isHome: false
+            isHome: true
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 

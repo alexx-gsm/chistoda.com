@@ -4,3 +4,4 @@ node_modules/
 package.json
 src/
 webpack.config.js
+public/dist/app.bundle.js.map
