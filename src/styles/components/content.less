@@ -35,6 +35,23 @@
         background: rgba(255, 255, 255, 0.8);
         padding: 15px;
     }
+    .content-card.services {
+        .tab-hedear {
+            height: 35px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .tab-header_item {
+            flex-basis: 50%;
+            text-align: center;
+            font-size: 20px;
+            line-height: 35px;
+
+            &:first-child {
+                border-bottom: 2px solid @color-main-crimson;
+            }
+        }
+    }
 }
 
 // NAVigation - main menu
@@ -90,7 +107,7 @@
         display: block;
         width: 150px;
         height: 35px;
-        background: rgba(0, 0, 0, 0.8);;
+        background: rgba(0, 0, 0, 0.8);
         font-size: 18px;
         line-height: 35px;
         padding-left: 15px;
@@ -103,6 +120,11 @@
     }
     a.active {
         background-color: @color-main-crimson;
+    }
+    .nav-vert_separator {
+        height: 10px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
     }
 }
 

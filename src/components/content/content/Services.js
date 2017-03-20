@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
 export const Services = () => (
-    <div className="content-card flex-row">
+    <div className="content-card services flex-row">
         <div className="content-card__caption flex-column">
             <span>УСЛУГИ</span></div>
         <div className="content-card__body flex-column">
+            <div className="tab-hedear flex-row">
+                <div className="tab-header_item">Физ. лица</div>
+                <div className="tab-header_item">Юр. лица</div>
+            </div>
             <p>
                 «ЧистоДА» - это молодая, динамично развивающаяся, клининговая компания. Выполняем различные виды клининговых услуг и всегда открыты для сотрудничества как с физическими, так и с юридическими лицами. Качество нашей работы, индивидуальный подход к клиенту вас приятно удивят!
                 Квалифицированный штат наших сотрудников выполнит работу различного уровня сложности независимо от материала и площади качественно и в срок! Вы останетесь довольны!

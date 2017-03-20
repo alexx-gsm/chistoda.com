@@ -10785,7 +10785,12 @@ var Catalog = exports.Catalog = function Catalog() {
             _react2.default.createElement(
                 "p",
                 null,
-                "\u043A\u0430\u0442\u0430\u043B\u043E\u0433 \u0438 \u0447\u0442\u043E \u043D\u0438\u0442\u044C \u0435\u0449\u0435"
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "\u041A\u0430\u0442\u0430\u043B\u043E\u0433 \u0441 \u0442\u043E\u0432\u0430\u0440\u0430\u043C\u0438"
+                ),
+                "\u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0444\u043E\u0440\u043C \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0446\u0435\u043D\u0438\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u041F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442, \u0447\u0442\u043E \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0430\u044F\u0441\u044F \u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043E\u0431\u043E\u0439 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0441\u0438\u0441\u0442\u0435\u043C \u043C\u0430\u0441\u0441\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044F. \u0422\u043E\u0432\u0430\u0440\u0438\u0449\u0438! \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u044B\u0439 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0441\u0442 \u0438 \u0441\u0444\u0435\u0440\u0430 \u043D\u0430\u0448\u0435\u0439 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F."
             )
         )
     );
@@ -10842,6 +10847,10 @@ var Main = function (_Component) {
                     return _react2.default.createElement(_.Catalog, null);
                 case 'feedbacks':
                     return _react2.default.createElement(_.FeedBacks, null);
+                case 'blog':
+                    return _react2.default.createElement(_.Blog, null);
+                case 'contacts':
+                    return _react2.default.createElement(_.Contacts, null);
                 default:
                     return _this.state.route;
             }
@@ -10885,7 +10894,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Services = exports.Services = function Services() {
     return _react2.default.createElement(
         "div",
-        { className: "content-card flex-row" },
+        { className: "content-card services flex-row" },
         _react2.default.createElement(
             "div",
             { className: "content-card__caption flex-column" },
@@ -10898,6 +10907,20 @@ var Services = exports.Services = function Services() {
         _react2.default.createElement(
             "div",
             { className: "content-card__body flex-column" },
+            _react2.default.createElement(
+                "div",
+                { className: "tab-hedear flex-row" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "tab-header_item" },
+                    "\u0424\u0438\u0437. \u043B\u0438\u0446\u0430"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "tab-header_item" },
+                    "\u042E\u0440. \u043B\u0438\u0446\u0430"
+                )
+            ),
             _react2.default.createElement(
                 "p",
                 null,
@@ -10945,6 +10968,24 @@ Object.defineProperty(exports, 'FeedBacks', {
   }
 });
 
+var _Blog = __webpack_require__(257);
+
+Object.defineProperty(exports, 'Blog', {
+  enumerable: true,
+  get: function get() {
+    return _Blog.Blog;
+  }
+});
+
+var _Contacts = __webpack_require__(258);
+
+Object.defineProperty(exports, 'Contacts', {
+  enumerable: true,
+  get: function get() {
+    return _Contacts.Contacts;
+  }
+});
+
 /***/ }),
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10983,9 +11024,10 @@ var NavVert = exports.NavVert = function NavVert() {
     return _react2.default.createElement(
         'div',
         { id: 'nav-vert' },
+        _react2.default.createElement('div', { className: 'nav-vert_separator' }),
         _react2.default.createElement(
             _reactRouterDom.NavLink,
-            { exact: true, activeClassName: '/', to: '/' },
+            { exact: true, to: '/' },
             'HOME'
         ),
         _react2.default.createElement(
@@ -11001,7 +11043,8 @@ var NavVert = exports.NavVert = function NavVert() {
             _menuExtra2.default.map(function (item) {
                 return _react2.default.createElement(_NavItem2.default, _extends({ key: item._id }, item));
             })
-        )
+        ),
+        _react2.default.createElement('div', { className: 'nav-vert_separator' })
     );
 };
 
@@ -13489,7 +13532,7 @@ exports = module.exports = __webpack_require__(116)(undefined);
 
 
 // module
-exports.push([module.i, "#root,\n#root > div {\n  height: 100%;\n}\n.App {\n  height: 100%;\n}\n.App .header {\n  padding-top: 15px;\n}\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n#header-logo {\n  padding: 0 15px;\n  background-color: #760B0E;\n}\n#header-logo img {\n  width: 250px;\n  height: 100px;\n}\n#header-phone {\n  position: relative;\n  width: 350px;\n  min-width: 350px;\n  height: 98px;\n  padding-top: 2px;\n  color: #fff;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n}\n#header-phone .number {\n  font-size: 35px;\n  line-height: 35px;\n  font-weight: 700;\n  /*text-shadow: 1px 1px 5px rgba(0,0,0,0.3);*/\n}\n#header-phone .free-call {\n  font-size: 14px;\n  padding-bottom: 10px;\n}\n#header-phone .callback span {\n  font-weight: 700;\n  /*text-shadow: 1px 1px 5px rgba(0,0,0,0.3);*/\n  padding: 5px;\n  font-size: 16px;\n}\n#header-phone .callback a {\n  color: #fff;\n}\n#header-phone .callback a:hover,\n#header-phone .callback a:focus {\n  text-decoration: none;\n  color: #760B0E;\n}\n#phone-info {\n  position: absolute;\n  top: -5px;\n  right: 15px;\n  color: #760B0E;\n}\n#tool-menu {\n  width: 100%;\n  height: 50px;\n  margin-left: 15px;\n  background-color: rgba(146, 146, 146, 0.8);\n}\n#tool-menu .icon-menu {\n  color: #fff;\n  padding: 0 10px;\n}\n#tool-menu .icon-menu-item {\n  color: #fff;\n  padding: 0 20px;\n  display: flex;\n  align-items: center;\n}\n#tool-menu .icon-menu-item span {\n  padding-left: 5px;\n}\n#tool-menu a.icon-menu-item:hover,\n#tool-menu a.icon-menu-item:focus {\n  text-decoration: none;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n  color: #760B0E;\n}\n#content {\n  max-height: 100%;\n  max-width: 100%;\n  flex-basis: 100%;\n}\n#content-wrapper {\n  min-width: 760px;\n  max-width: 960px;\n  padding: 50px 15px 15px;\n}\n#content-wrapper .content-card {\n  height: 100%;\n  border: 1px solid gray;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n}\n#content-wrapper .content-card__caption {\n  width: 24px;\n  flex-shrink: 0;\n  justify-content: center;\n  line-height: 24px;\n  z-index: 20;\n  background: #760B0E;\n}\n#content-wrapper .content-card__caption span {\n  transform: rotate(-90deg);\n  white-space: nowrap;\n  align-self: center;\n  color: white;\n  font-weight: bold;\n  font-size: 16px;\n}\n#content-wrapper .content-card__body {\n  width: 100%;\n  background: rgba(255, 255, 255, 0.8);\n  padding: 15px;\n}\n#nav {\n  align-self: center;\n  padding: 0 15px;\n}\n#nav .nav_menu-link {\n  background-color: rgba(118, 11, 14, 0.8);\n}\n#nav .nav_menu-link a:nth-child(even) {\n  background-color: rgba(118, 11, 14, 0.9);\n}\n#nav .nav_menu-link a {\n  display: block;\n  width: 150px;\n  height: 60px;\n  line-height: 60px;\n  text-transform: uppercase;\n  font-size: 20px;\n  color: white;\n  text-align: center;\n}\n#nav .nav_menu-link a:hover,\n#nav .nav_menu-link a:focus {\n  text-decoration: none;\n  background-color: #760B0E;\n  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);\n  line-height: 58px;\n}\n#nav .nav_extra-link {\n  height: 26px;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n#nav .nav_extra-link a {\n  color: #fff;\n}\n#nav .nav_extra-link a:hover,\n#nav .nav_extra-link a:focus {\n  text-decoration: none;\n  color: #b2b2b2;\n}\n#nav-vert {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  height: 100%;\n}\n#nav-vert .nav_main-link,\n#nav-vert .nav_extra-link {\n  height: initial;\n}\n#nav-vert a {\n  display: block;\n  width: 150px;\n  height: 35px;\n  background: rgba(0, 0, 0, 0.8);\n  font-size: 18px;\n  line-height: 35px;\n  padding-left: 15px;\n  color: white;\n  text-transform: capitalize;\n}\n#nav-vert a:hover {\n  text-decoration: none;\n  border-right: 5px solid #760B0E;\n}\n#nav-vert a.active {\n  background-color: #760B0E;\n}\n#news .news-block {\n  margin: 15px 15px 15px 0;\n  padding: 8px 15px;\n  width: 325px;\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n}\n#news .news-block .news-block_title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#news .news-item {\n  position: relative;\n  padding: 5px 0;\n}\n#news .news-item img {\n  width: 80px;\n  height: 80px;\n  position: absolute;\n  border: 1px solid #b2b2b2;\n}\n#news .news-item .news-item_title {\n  height: 80px;\n  margin-left: 80px;\n  padding-left: 10px;\n}\n#news .icon-news {\n  cursor: pointer;\n}\n#news .icon-news:hover {\n  border: 1px solid;\n  border-radius: 50%;\n}\n@media (max-width: 1280px) {\n  #news .news-block {\n    width: 135px;\n  }\n  #news .news-item {\n    text-align: center;\n  }\n  #news .news-item img {\n    position: relative;\n  }\n  #news .news-item_title {\n    display: none;\n  }\n}\n@media (max-width: 1100px) {\n  #news {\n    display: none;\n  }\n}\n#footer {\n  height: 50px;\n  flex-shrink: 0;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n.padding-bottom-15 {\n  padding-bottom: 15px;\n}\n", ""]);
+exports.push([module.i, "#root,\n#root > div {\n  height: 100%;\n}\n.App {\n  height: 100%;\n}\n.App .header {\n  padding-top: 15px;\n}\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n#header-logo {\n  padding: 0 15px;\n  background-color: #760B0E;\n}\n#header-logo img {\n  width: 250px;\n  height: 100px;\n}\n#header-phone {\n  position: relative;\n  width: 350px;\n  min-width: 350px;\n  height: 98px;\n  padding-top: 2px;\n  color: #fff;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n}\n#header-phone .number {\n  font-size: 35px;\n  line-height: 35px;\n  font-weight: 700;\n  /*text-shadow: 1px 1px 5px rgba(0,0,0,0.3);*/\n}\n#header-phone .free-call {\n  font-size: 14px;\n  padding-bottom: 10px;\n}\n#header-phone .callback span {\n  font-weight: 700;\n  /*text-shadow: 1px 1px 5px rgba(0,0,0,0.3);*/\n  padding: 5px;\n  font-size: 16px;\n}\n#header-phone .callback a {\n  color: #fff;\n}\n#header-phone .callback a:hover,\n#header-phone .callback a:focus {\n  text-decoration: none;\n  color: #760B0E;\n}\n#phone-info {\n  position: absolute;\n  top: -5px;\n  right: 15px;\n  color: #760B0E;\n}\n#tool-menu {\n  width: 100%;\n  height: 50px;\n  margin-left: 15px;\n  background-color: rgba(146, 146, 146, 0.8);\n}\n#tool-menu .icon-menu {\n  color: #fff;\n  padding: 0 10px;\n}\n#tool-menu .icon-menu-item {\n  color: #fff;\n  padding: 0 20px;\n  display: flex;\n  align-items: center;\n}\n#tool-menu .icon-menu-item span {\n  padding-left: 5px;\n}\n#tool-menu a.icon-menu-item:hover,\n#tool-menu a.icon-menu-item:focus {\n  text-decoration: none;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n  color: #760B0E;\n}\n#content {\n  max-height: 100%;\n  max-width: 100%;\n  flex-basis: 100%;\n}\n#content-wrapper {\n  min-width: 760px;\n  max-width: 960px;\n  padding: 50px 15px 15px;\n}\n#content-wrapper .content-card {\n  height: 100%;\n  border: 1px solid gray;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n}\n#content-wrapper .content-card__caption {\n  width: 24px;\n  flex-shrink: 0;\n  justify-content: center;\n  line-height: 24px;\n  z-index: 20;\n  background: #760B0E;\n}\n#content-wrapper .content-card__caption span {\n  transform: rotate(-90deg);\n  white-space: nowrap;\n  align-self: center;\n  color: white;\n  font-weight: bold;\n  font-size: 16px;\n}\n#content-wrapper .content-card__body {\n  width: 100%;\n  background: rgba(255, 255, 255, 0.8);\n  padding: 15px;\n}\n#content-wrapper .content-card.services .tab-hedear {\n  height: 35px;\n  width: 100%;\n  margin-bottom: 20px;\n}\n#content-wrapper .content-card.services .tab-header_item {\n  flex-basis: 50%;\n  text-align: center;\n  font-size: 20px;\n  line-height: 35px;\n}\n#content-wrapper .content-card.services .tab-header_item:first-child {\n  border-bottom: 2px solid #760B0E;\n}\n#nav {\n  align-self: center;\n  padding: 0 15px;\n}\n#nav .nav_menu-link {\n  background-color: rgba(118, 11, 14, 0.8);\n}\n#nav .nav_menu-link a:nth-child(even) {\n  background-color: rgba(118, 11, 14, 0.9);\n}\n#nav .nav_menu-link a {\n  display: block;\n  width: 150px;\n  height: 60px;\n  line-height: 60px;\n  text-transform: uppercase;\n  font-size: 20px;\n  color: white;\n  text-align: center;\n}\n#nav .nav_menu-link a:hover,\n#nav .nav_menu-link a:focus {\n  text-decoration: none;\n  background-color: #760B0E;\n  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);\n  line-height: 58px;\n}\n#nav .nav_extra-link {\n  height: 26px;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n#nav .nav_extra-link a {\n  color: #fff;\n}\n#nav .nav_extra-link a:hover,\n#nav .nav_extra-link a:focus {\n  text-decoration: none;\n  color: #b2b2b2;\n}\n#nav-vert {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  height: 100%;\n}\n#nav-vert .nav_main-link,\n#nav-vert .nav_extra-link {\n  height: initial;\n}\n#nav-vert a {\n  display: block;\n  width: 150px;\n  height: 35px;\n  background: rgba(0, 0, 0, 0.8);\n  font-size: 18px;\n  line-height: 35px;\n  padding-left: 15px;\n  color: white;\n  text-transform: capitalize;\n}\n#nav-vert a:hover {\n  text-decoration: none;\n  border-right: 5px solid #760B0E;\n}\n#nav-vert a.active {\n  background-color: #760B0E;\n}\n#nav-vert .nav-vert_separator {\n  height: 10px;\n  width: 100%;\n  background: rgba(0, 0, 0, 0.8);\n}\n#news .news-block {\n  margin: 15px 15px 15px 0;\n  padding: 8px 15px;\n  width: 325px;\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n}\n#news .news-block .news-block_title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#news .news-item {\n  position: relative;\n  padding: 5px 0;\n}\n#news .news-item img {\n  width: 80px;\n  height: 80px;\n  position: absolute;\n  border: 1px solid #b2b2b2;\n}\n#news .news-item .news-item_title {\n  height: 80px;\n  margin-left: 80px;\n  padding-left: 10px;\n}\n#news .icon-news {\n  cursor: pointer;\n}\n#news .icon-news:hover {\n  border: 1px solid;\n  border-radius: 50%;\n}\n@media (max-width: 1280px) {\n  #news .news-block {\n    width: 135px;\n  }\n  #news .news-item {\n    text-align: center;\n  }\n  #news .news-item img {\n    position: relative;\n  }\n  #news .news-item_title {\n    display: none;\n  }\n}\n@media (max-width: 1100px) {\n  #news {\n    display: none;\n  }\n}\n#footer {\n  height: 50px;\n  flex-shrink: 0;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n.padding-bottom-15 {\n  padding-bottom: 15px;\n}\n", ""]);
 
 // exports
 
@@ -28723,7 +28766,108 @@ var FeedBacks = exports.FeedBacks = function FeedBacks() {
             _react2.default.createElement(
                 "p",
                 null,
-                "\u0422\u0443\u0442 \u043A\u0440\u0430\u0441\u0438\u0432\u043E \u0440\u0430\u0437\u043C\u0435\u0441\u0442\u0438\u043C \u043E\u0442\u0437\u044B\u0432\u044B \u0441 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C\u044E \u0434\u043E\u0431\u0430\u0432\u043B\u044F\u0442\u044C \u043E\u0442\u0437\u044B\u0432\u044B \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F\u043C"
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "\u041E\u0442\u0437\u044B\u0432\u044B \u043E \u043D\u0430\u0448\u0435\u0439 \u0440\u0430\u0431\u043E\u0442\u0435"
+                ),
+                "\u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0444\u043E\u0440\u043C \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0446\u0435\u043D\u0438\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u041F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442, \u0447\u0442\u043E \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0430\u044F\u0441\u044F \u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043E\u0431\u043E\u0439 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0441\u0438\u0441\u0442\u0435\u043C \u043C\u0430\u0441\u0441\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044F. \u0422\u043E\u0432\u0430\u0440\u0438\u0449\u0438! \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u044B\u0439 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0441\u0442 \u0438 \u0441\u0444\u0435\u0440\u0430 \u043D\u0430\u0448\u0435\u0439 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0417\u043D\u0430\u0447\u0438\u043C\u043E\u0441\u0442\u044C \u044D\u0442\u0438\u0445 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0447\u0435\u0432\u0438\u0434\u043D\u0430, \u0447\u0442\u043E \u0440\u0430\u043C\u043A\u0438 \u0438 \u043C\u0435\u0441\u0442\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0438\u0440\u043E\u043A\u043E\u043C\u0443 \u043A\u0440\u0443\u0433\u0443 (\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u043E\u0432) \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0438 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u0420\u0430\u0432\u043D\u044B\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0440\u0430\u043C\u043A\u0438 \u0438 \u043C\u0435\u0441\u0442\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0438\u0440\u043E\u043A\u043E\u043C\u0443 \u043A\u0440\u0443\u0433\u0443 (\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u043E\u0432) \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0438 \u0444\u043E\u0440\u043C \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0417\u0430\u0434\u0430\u0447\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438, \u0432 \u043E\u0441\u043E\u0431\u0435\u043D\u043D\u043E\u0441\u0442\u0438 \u0436\u0435 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u043D\u0430\u043C\u0435\u0447\u0435\u043D\u043D\u044B\u0445 \u043F\u043B\u0430\u043D\u043E\u0432\u044B\u0445 \u0437\u0430\u0434\u0430\u043D\u0438\u0439 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C \u0432\u0430\u0436\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u044F \u043F\u043E \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043D\u0430\u0447\u0430\u043B\u043E \u043F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E \u043F\u043E\u0437\u0438\u0446\u0438\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432, \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043D\u0430\u0441\u0443\u0449\u043D\u044B\u043C \u043F\u043E\u0442\u0440\u0435\u0431\u043D\u043E\u0441\u0442\u044F\u043C."
+            )
+        )
+    );
+};
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Blog = undefined;
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Blog = exports.Blog = function Blog() {
+    return _react2.default.createElement(
+        "div",
+        { className: "content-card flex-row" },
+        _react2.default.createElement(
+            "div",
+            { className: "content-card__caption flex-column" },
+            _react2.default.createElement(
+                "span",
+                null,
+                "\u0411\u041B\u041E\u0413"
+            )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "content-card__body flex-column" },
+            _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "\u041E\u0431\u0449\u0435\u043D\u0438\u0435 \u0441 \u043A\u043B\u0438\u0435\u043D\u0442\u0430\u043C\u0438"
+                ),
+                "\u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0444\u043E\u0440\u043C \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0446\u0435\u043D\u0438\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u041F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442, \u0447\u0442\u043E \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0430\u044F\u0441\u044F \u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043E\u0431\u043E\u0439 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0441\u0438\u0441\u0442\u0435\u043C \u043C\u0430\u0441\u0441\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044F. \u0422\u043E\u0432\u0430\u0440\u0438\u0449\u0438! \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u044B\u0439 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0441\u0442 \u0438 \u0441\u0444\u0435\u0440\u0430 \u043D\u0430\u0448\u0435\u0439 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0417\u043D\u0430\u0447\u0438\u043C\u043E\u0441\u0442\u044C \u044D\u0442\u0438\u0445 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0447\u0435\u0432\u0438\u0434\u043D\u0430, \u0447\u0442\u043E \u0440\u0430\u043C\u043A\u0438 \u0438 \u043C\u0435\u0441\u0442\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0438\u0440\u043E\u043A\u043E\u043C\u0443 \u043A\u0440\u0443\u0433\u0443 (\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u043E\u0432) \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0438 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u0420\u0430\u0432\u043D\u044B\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0440\u0430\u043C\u043A\u0438 \u0438 \u043C\u0435\u0441\u0442\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0438\u0440\u043E\u043A\u043E\u043C\u0443 \u043A\u0440\u0443\u0433\u0443 (\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u043E\u0432) \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0438 \u0444\u043E\u0440\u043C \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0417\u0430\u0434\u0430\u0447\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438, \u0432 \u043E\u0441\u043E\u0431\u0435\u043D\u043D\u043E\u0441\u0442\u0438 \u0436\u0435 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u043D\u0430\u043C\u0435\u0447\u0435\u043D\u043D\u044B\u0445 \u043F\u043B\u0430\u043D\u043E\u0432\u044B\u0445 \u0437\u0430\u0434\u0430\u043D\u0438\u0439 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C \u0432\u0430\u0436\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u044F \u043F\u043E \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043D\u0430\u0447\u0430\u043B\u043E \u043F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E \u043F\u043E\u0437\u0438\u0446\u0438\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432, \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043D\u0430\u0441\u0443\u0449\u043D\u044B\u043C \u043F\u043E\u0442\u0440\u0435\u0431\u043D\u043E\u0441\u0442\u044F\u043C."
+            )
+        )
+    );
+};
+
+/***/ }),
+/* 258 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Contacts = undefined;
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Contacts = exports.Contacts = function Contacts() {
+    return _react2.default.createElement(
+        "div",
+        { className: "content-card flex-row" },
+        _react2.default.createElement(
+            "div",
+            { className: "content-card__caption flex-column" },
+            _react2.default.createElement(
+                "span",
+                null,
+                "\u0411\u041B\u041E\u0413"
+            )
+        ),
+        _react2.default.createElement(
+            "div",
+            { className: "content-card__body flex-column" },
+            _react2.default.createElement(
+                "p",
+                null,
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B"
+                ),
+                "\u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0444\u043E\u0440\u043C \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0446\u0435\u043D\u0438\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u041F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442, \u0447\u0442\u043E \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0430\u044F\u0441\u044F \u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043E\u0431\u043E\u0439 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0441\u0438\u0441\u0442\u0435\u043C \u043C\u0430\u0441\u0441\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044F. \u0422\u043E\u0432\u0430\u0440\u0438\u0449\u0438! \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u044B\u0439 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0441\u0442 \u0438 \u0441\u0444\u0435\u0440\u0430 \u043D\u0430\u0448\u0435\u0439 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0435 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0444\u043E\u0440\u043C \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u043E\u0446\u0435\u043D\u0438\u0442\u044C \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u041F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u0430\u044F \u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430 \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442, \u0447\u0442\u043E \u0441\u043B\u043E\u0436\u0438\u0432\u0448\u0430\u044F\u0441\u044F \u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043E\u0431\u043E\u0439 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u0439 \u044D\u043A\u0441\u043F\u0435\u0440\u0438\u043C\u0435\u043D\u0442 \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0441\u0438\u0441\u0442\u0435\u043C \u043C\u0430\u0441\u0441\u043E\u0432\u043E\u0433\u043E \u0443\u0447\u0430\u0441\u0442\u0438\u044F. \u0422\u043E\u0432\u0430\u0440\u0438\u0449\u0438! \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u044B\u0439 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439 \u0440\u043E\u0441\u0442 \u0438 \u0441\u0444\u0435\u0440\u0430 \u043D\u0430\u0448\u0435\u0439 \u0430\u043A\u0442\u0438\u0432\u043D\u043E\u0441\u0442\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0417\u043D\u0430\u0447\u0438\u043C\u043E\u0441\u0442\u044C \u044D\u0442\u0438\u0445 \u043F\u0440\u043E\u0431\u043B\u0435\u043C \u043D\u0430\u0441\u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0447\u0435\u0432\u0438\u0434\u043D\u0430, \u0447\u0442\u043E \u0440\u0430\u043C\u043A\u0438 \u0438 \u043C\u0435\u0441\u0442\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0438\u0440\u043E\u043A\u043E\u043C\u0443 \u043A\u0440\u0443\u0433\u0443 (\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u043E\u0432) \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0438 \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0443\u0441\u043B\u043E\u0432\u0438\u0439 \u0430\u043A\u0442\u0438\u0432\u0438\u0437\u0430\u0446\u0438\u0438. \u0420\u0430\u0432\u043D\u044B\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u0440\u0430\u043C\u043A\u0438 \u0438 \u043C\u0435\u0441\u0442\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432 \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u0442 \u0448\u0438\u0440\u043E\u043A\u043E\u043C\u0443 \u043A\u0440\u0443\u0433\u0443 (\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0441\u0442\u043E\u0432) \u0443\u0447\u0430\u0441\u0442\u0438\u0435 \u0432 \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0438 \u0444\u043E\u0440\u043C \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0417\u0430\u0434\u0430\u0447\u0430 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438, \u0432 \u043E\u0441\u043E\u0431\u0435\u043D\u043D\u043E\u0441\u0442\u0438 \u0436\u0435 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u043D\u0430\u043C\u0435\u0447\u0435\u043D\u043D\u044B\u0445 \u043F\u043B\u0430\u043D\u043E\u0432\u044B\u0445 \u0437\u0430\u0434\u0430\u043D\u0438\u0439 \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u0435\u0442 \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0442\u044C \u0432\u0430\u0436\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u044F \u043F\u043E \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0435 \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0439 \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043D\u043E\u0433\u043E \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F. \u0422\u0430\u043A\u0438\u043C \u043E\u0431\u0440\u0430\u0437\u043E\u043C \u043D\u0430\u0447\u0430\u043B\u043E \u043F\u043E\u0432\u0441\u0435\u0434\u043D\u0435\u0432\u043D\u043E\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0444\u043E\u0440\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044E \u043F\u043E\u0437\u0438\u0446\u0438\u0438 \u0441\u043F\u043E\u0441\u043E\u0431\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u043E\u0434\u0433\u043E\u0442\u043E\u0432\u043A\u0438 \u0438 \u0440\u0435\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F \u043A\u0430\u0434\u0440\u043E\u0432, \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u043D\u0430\u0441\u0443\u0449\u043D\u044B\u043C \u043F\u043E\u0442\u0440\u0435\u0431\u043D\u043E\u0441\u0442\u044F\u043C."
             )
         )
     );

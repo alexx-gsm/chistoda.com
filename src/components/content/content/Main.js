@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Services, Catalog, FeedBacks } from './';
+import { Services, Catalog, FeedBacks, Blog, Contacts } from './';
 
 export default class Main extends Component {
     state = {
@@ -14,6 +14,10 @@ export default class Main extends Component {
                 return <Catalog/>;
             case 'feedbacks':
                 return <FeedBacks/>;
+            case 'blog':
+                return <Blog/>;
+            case 'contacts':
+                return <Contacts/>;
             default:
                 return this.state.route;
         }
