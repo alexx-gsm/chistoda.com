@@ -1,0 +1,22 @@
+[
+  {
+    "_id": 1,
+    "title": "новость №1",
+    "img": "images/news/img-1.jpeg"
+  },
+  {
+    "_id": 2,
+    "title": "новость №2",
+    "img": "images/news/img-2.gif"
+  },
+  {
+    "_id": 3,
+    "title": "новость №3",
+    "img": "images/news/img-3.jpg"
+  },
+  {
+    "_id": 4,
+    "title": "новость №4",
+    "img": "images/news/img-4.png"
+  }
+]

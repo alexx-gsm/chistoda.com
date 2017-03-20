@@ -1,0 +1,27 @@
+[
+  {
+    "_id": 1,
+    "title": "услуги",
+    "link": "services"
+  },
+  {
+    "_id": 2,
+    "title": "каталог",
+    "link": "catalog"
+  },
+  {
+    "_id": 3,
+    "title": "отзывы",
+    "link": "feedbacks"
+  },
+  {
+    "_id": 4,
+    "title": "блог",
+    "link": "blog"
+  },
+  {
+    "_id": 5,
+    "title": "контакты",
+    "link": "contacts"
+  }
+]

@@ -1,0 +1,97 @@
+// CONTENT
+#content {
+     max-height: 100%;
+     max-width: 100%;
+     flex-basis: 100%;
+ }
+
+// NAVigation - main menu
+#nav {
+    align-self: center;
+    padding: 0 15px;
+
+    .nav_menu-item{
+        background-color: fade(@color-main-crimson, 80%);
+
+        &:nth-child(even) { background-color: fade(@color-main-crimson, 90%); }
+        a {
+            display: block;
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+
+            &:hover, &:focus {
+                text-decoration: none;
+                background-color: @color-main-crimson;
+                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+                line-height: 58px;
+            }
+        }
+    }
+    .nav_extra-link {
+        height: 26px;
+        background-color: rgba(0, 0, 0, 0.8);
+
+        a { color: #fff; }
+        a:hover, a:focus { text-decoration: none; color: #b2b2b2; }
+    }
+}
+
+//NAVigation : vertical main menu
+#nav-vert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+
+    .nav_main-link,
+    .nav_extra-link {
+        height: initial;
+    }
+}
+
+// NEWS
+#news {
+
+    .news-block {
+        margin: 15px;
+        padding: 8px 15px;
+        width: 325px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #d2d2d2;
+
+        .news-block_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .news-item {
+        position: relative;
+        padding: 5px 0;
+
+        img {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            border: 1px solid #b2b2b2;
+        }
+        .news-item_title {
+            height: 80px;
+            margin-left: 80px;
+            padding-left: 10px;
+        }
+    }
+    .icon-news {
+        cursor: pointer;
+        &:hover {
+            border: 1px solid;
+            border-radius: 50%;
+        }
+    }
+}
