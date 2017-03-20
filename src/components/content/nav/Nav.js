@@ -14,7 +14,6 @@ export const Nav =() => (
             <Link to="/about">О компании</Link>
             <Link to="/done">Выполненные работы</Link>
             <Link to="/price">Скачать прайс</Link>
-            <Link/>
         </div>
 
     </div>
