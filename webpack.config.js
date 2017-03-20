@@ -17,7 +17,7 @@ module.exports = {
         aggregateTimeout: 100
     },
 
-    devtool: NODE_ENV == 'dev' ? 'source-map' : null,
+    // devtool: NODE_ENV == 'dev' ? 'source-map' : null,
 
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),

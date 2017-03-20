@@ -2,26 +2,26 @@
   {
     "_id": 1,
     "title": "услуги",
-    "link": "services"
+    "link": "/services"
   },
   {
     "_id": 2,
     "title": "каталог",
-    "link": "catalog"
+    "link": "/catalog"
   },
   {
     "_id": 3,
     "title": "отзывы",
-    "link": "feedbacks"
+    "link": "/feedbacks"
   },
   {
     "_id": 4,
     "title": "блог",
-    "link": "blog"
+    "link": "/blog"
   },
   {
     "_id": 5,
     "title": "контакты",
-    "link": "contacts"
+    "link": "/contacts"
   }
 ]

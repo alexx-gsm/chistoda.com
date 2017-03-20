@@ -4,16 +4,48 @@
      max-width: 100%;
      flex-basis: 100%;
  }
+#content-wrapper {
+    min-width: 760px;
+    max-width: 960px;
+    padding: 50px 15px 15px;
+
+    .content-card {
+        height: 100%;
+        border: 1px solid gray;
+        box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+    .content-card__caption {
+        width: 24px;
+        flex-shrink: 0;
+        justify-content: center;
+        line-height: 24px;
+        z-index: 20;
+        background: @color-main-crimson;
+        span {
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            align-self: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+    .content-card__body {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+    }
+}
 
 // NAVigation - main menu
 #nav {
     align-self: center;
     padding: 0 15px;
 
-    .nav_menu-item{
+    .nav_menu-link{
         background-color: fade(@color-main-crimson, 80%);
 
-        &:nth-child(even) { background-color: fade(@color-main-crimson, 90%); }
+        a:nth-child(even) { background-color: fade(@color-main-crimson, 90%); }
         a {
             display: block;
             width: 150px;
@@ -31,6 +63,7 @@
                 line-height: 58px;
             }
         }
+
     }
     .nav_extra-link {
         height: 26px;
@@ -53,13 +86,31 @@
     .nav_extra-link {
         height: initial;
     }
+    a {
+        display: block;
+        width: 150px;
+        height: 35px;
+        background: rgba(0, 0, 0, 0.8);;
+        font-size: 18px;
+        line-height: 35px;
+        padding-left: 15px;
+        color: white;
+        text-transform: capitalize;
+    }
+    a:hover {
+        text-decoration: none;
+        border-right: 5px solid @color-main-crimson;
+    }
+    a.active {
+        background-color: @color-main-crimson;
+    }
 }
 
 // NEWS
 #news {
 
     .news-block {
-        margin: 15px;
+        margin: 15px 15px 15px 0;
         padding: 8px 15px;
         width: 325px;
         background-color: rgba(0, 0, 0, 0.8);
@@ -93,5 +144,19 @@
             border: 1px solid;
             border-radius: 50%;
         }
+    }
+}
+
+@media (max-width: 1280px) {
+    #news {
+        .news-block { width: 135px; }
+        .news-item { text-align: center; }
+        .news-item img { position: relative; }
+        .news-item_title { display: none; }
+    }
+}
+@media (max-width: 1100px) {
+    #news {
+        display: none;
     }
 }

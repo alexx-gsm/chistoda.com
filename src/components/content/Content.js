@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import { Nav } from './nav/Nav';
 import { NavVert } from './nav/Nav-vert';
+import Main from './content/Main';
 import News from './news/News';
 
 export default class Content extends Component {
     state = {
-        isHome: true
+        isHome: this.props.isHome || false
     };
 
     render() {
+        const Card = () => (
+            <div id="main" className="h-100">
+                <Main route={this.props.route} />
+            </div>
+        );
+
         return (
             <div id="content" className="flex-row justify-content-between align-items-start">
                 {this.state.isHome ? <Nav /> : <NavVert/>}
-                <div id="main"></div>
+                {this.state.isHome ?      '' : <Card />}
+
                 <News />
             </div>
         )
