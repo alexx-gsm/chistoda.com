@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Nav } from './nav/Nav';
 import { NavVert } from './nav/Nav-vert';
-import Main from './content/Main';
+import Main from './pages/Main';
 import News from './news/News';
 
 export default class Content extends Component {

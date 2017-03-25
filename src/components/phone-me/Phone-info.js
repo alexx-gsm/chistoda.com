@@ -1,12 +1,9 @@
-import React, { Component } from 'react';
-import IconInfo from 'react-icons/lib/md/error-outline'
+import React from 'react';
+import MdInfoOutline from 'react-icons/lib/md/info-outline';
+import MdInfo from 'react-icons/lib/md/info';
 
-export default class PhoneInfo extends Component {
-    render() {
-        return (
-            <span id="phone-info">
-                <IconInfo />
-            </span>
-        )
-    }
-}
+export const PhoneInfo = ({isOpen, handleClose}) =>  (
+    <span id="phone-info" onClick={handleClose}>
+        {isOpen ? <MdInfo size={24} /> : <MdInfoOutline size={24} />}
+    </span>
+);

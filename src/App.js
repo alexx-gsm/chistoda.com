@@ -11,13 +11,14 @@ class App extends Component {
         return (
 
                 <div className="App container-fluid flex-column justify-content-between">
-                    <div className="header flex-row justify-content-between align-items-start">
-                        <Logo />
-                        <PhoneMe />
-                        <ToolMenu />
-                    </div>
                     <Router>
                         <div className="flex-column">
+                            <div className="header flex-row justify-content-between align-items-start">
+                                <Logo />
+                                <PhoneMe />
+                                <ToolMenu />
+                            </div>
+
                             <Route exact path="/"       render={() => <Content isHome={true} />} />
                             <Route path="/services"     render={() => <Content route="services"/>} />
                             <Route path="/catalog"      render={() => <Content route="catalog"/>} />
