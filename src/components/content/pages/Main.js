@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Services, Catalog, FeedBacks, Blog, Contacts, Price } from './';
+import {
+  Services, Catalog, FeedBacks, Blog,
+  Contacts, About, Prices
+} from './';
 
 export default class Main extends Component {
     state = {
@@ -16,10 +19,12 @@ export default class Main extends Component {
                 return <FeedBacks/>;
             case 'blog':
                 return <Blog/>;
+            case 'about':
+              return <About/>;
             case 'contacts':
                 return <Contacts/>;
-            case 'price':
-                return <Price/>;
+            case 'prices':
+                return <Prices/>;
             default:
                 return this.state.route;
         }

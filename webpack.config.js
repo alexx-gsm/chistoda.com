@@ -1,5 +1,7 @@
 const NODE_ENV = process.env.NODE_ENV || 'dev';
 const webpack = require('webpack');
+const path = require('path');
+require('autoprefixer');
 
 module.exports = {
     context: __dirname + '/src',
@@ -7,9 +9,11 @@ module.exports = {
         index: './index'
     },
     output: {
-        // path: __dirname + './public/assets/js',
-        filename: './public/dist/app.bundle.js',
-        library: '[name]'
+        path: path.join(__dirname, 'public'),
+        filename: './dist/app.bundle.js',
+        library: '[name]',
+        // publicPath: 'images/'
+
     },
 
     watch: NODE_ENV == 'dev',
@@ -29,17 +33,26 @@ module.exports = {
 
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                exclude: [/node_modules/],
-                loader: 'babel-loader',
-            }, {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            }, {
-                test: /\.less$/,
-                use: ['style-loader', 'css-loader', 'less-loader']
-            }
+          {
+              test: /\.js$/,
+              exclude: [/node_modules/],
+              loader: 'babel-loader',
+          }, {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader', 'postcss-loader']
+          }, {
+              test: /\.less$/,
+              use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader']
+          },
+          {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            use: [
+                "file-loader?name=images/img-[hash:6].[ext]"
+                // 'url-loader?limit=10000'
+                // 'file-loader?name=[name].[ext]',
+                // 'img-loader'
+            ]
+          }
         ]
     }
 }

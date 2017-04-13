@@ -24,3 +24,42 @@ body {
     display: flex;
     height: 100%;
 }
+
+
+/*------------------------------------------------------*/
+/*      SCROLL                                          */
+/*------------------------------------------------------*/
+
+  ::-webkit-scrollbar-button {
+      background-image:url("");
+      background-repeat:no-repeat;
+      width:7px;
+      height:0;
+  }
+
+::-webkit-scrollbar-track {
+    width: 3px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color:#760B0E;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image: url("./../images/scroll-center.svg");
+}
+
+::-webkit-resizer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    width:7px;
+    height:0;
+
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+
+}

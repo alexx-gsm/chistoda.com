@@ -1,0 +1,44 @@
+#content-wrapper .page-contacts .content-card__body { padding: 0;}
+
+.page-contacts {
+  .bg-map {
+    background: url('./../../../styles/images/chistoda-office.png') 100% 100% no-repeat;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contacts-info__wrapper {
+    width: 400px;
+    height: 100%;
+    padding: 15px;
+
+    .contacts-info {
+      background-color: fade(white, 80%);
+      padding: 8px 0;
+      border: 1px solid;
+      .box_shadow;
+      .box_border;
+    }
+    .info-title {
+      font-size: 30px;
+      font-weight: 500;
+      text-align: right;
+      color: @color-main-crimson;
+      border-bottom: 1px solid @color-main-crimson;
+      margin: 8px;
+    }
+    .info-info {
+      list-style: none;
+      padding-left: 20px;
+
+      li, a {
+        font-weight: 500;
+        font-size: 18px;
+        color: #505050;
+      }
+      a { display: flex;}
+      svg { margin-right: 10px; }
+    }
+  }
+}

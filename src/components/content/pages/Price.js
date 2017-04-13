@@ -1,38 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const baseURL = 'http://api.chistoda.loc/api';
+export const Price = (price) => (
 
-const loadPrice = () => {
-    return fetch(`${baseURL}/price`)
-        .then( res => res.json() )
-};
+  <div className="price-download">
 
-export class Price extends Component {
-    state = {
-        price: {}
-    };
+    <h2>{price.title}</h2>
 
-    componentDidMount() {
-        loadPrice()
-            .then(price => {
-                console.log(price);
-                this.setState( {price} )
-            })
-    }
+    <div className="flex-row justify-content-between align-items-center">
+      <small>{price.name}</small>
+      <a href={price.link} target="_blank" className="btn__download-price">Скачать</a>
+    </div>
 
-    render() {
-        return (
-            <div className="content-card flex-row">
-                <div className="content-card__caption flex-column">
-                    <span>Прайс</span>
-                </div>
-                <div className="content-card__body flex-column">
-                    <div className="price-download">
-                        <h2>Прайс</h2>
-                        <button type="button" className="btn btn-outline-danger">Скачать</button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+  </div>
+
+);
