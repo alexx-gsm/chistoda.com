@@ -3,11 +3,22 @@ import {
   Services, Catalog, FeedBacks, Blog,
   Contacts, About, Prices
 } from './';
+import menu from './../nav/menu.json';
+import menuExtra from './../nav/menu-extra.json';
 
 export default class Main extends Component {
     state = {
-        route: this.props.route
+        route: this.props.route,
+        quickMenu: {}
     };
+
+    componentDidMount() {
+        let quickMenu = {};
+        menu.map(item => quickMenu[item.alias] = item.link);
+        menuExtra.map(item => quickMenu[item.alias] = item.link);
+
+        this.setState({quickMenu});
+    }
 
     handleContent = () => {
         switch (this.state.route) {
@@ -20,7 +31,7 @@ export default class Main extends Component {
             case 'blog':
                 return <Blog/>;
             case 'about':
-              return <About/>;
+              return <About {...this.state.quickMenu}/>;
             case 'contacts':
                 return <Contacts/>;
             case 'prices':

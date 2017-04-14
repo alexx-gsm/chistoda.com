@@ -10551,16 +10551,19 @@ module.exports = [
 	{
 		"_id": 1,
 		"title": "О нас",
+		"alias": "about",
 		"link": "/about"
 	},
 	{
 		"_id": 2,
 		"title": "Наша работа",
+		"alias": "done",
 		"link": "/done"
 	},
 	{
 		"_id": 3,
 		"title": "Прайс",
+		"alias": "price",
 		"link": "/prices"
 	}
 ];
@@ -10573,26 +10576,31 @@ module.exports = [
 	{
 		"_id": 1,
 		"title": "услуги",
+		"alias": "services",
 		"link": "/services"
 	},
 	{
 		"_id": 2,
 		"title": "каталог",
+		"alias": "catalog",
 		"link": "/catalog"
 	},
 	{
 		"_id": 3,
 		"title": "отзывы",
+		"alias": "feedbacks",
 		"link": "/feedbacks"
 	},
 	{
 		"_id": 4,
 		"title": "блог",
+		"alias": "blog",
 		"link": "/blog"
 	},
 	{
 		"_id": 5,
 		"title": "контакты",
+		"alias": "contacts",
 		"link": "/contacts"
 	}
 ];
@@ -11138,117 +11146,211 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(37);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var About = exports.About = function About() {
+var About = exports.About = function About(quickMenu) {
+  console.log(quickMenu.price);
   return _react2.default.createElement(
-    "div",
-    { className: "page-about content-card flex-row" },
+    'div',
+    { className: 'page-about content-card flex-row' },
     _react2.default.createElement(
-      "div",
-      { className: "content-card__caption flex-column" },
+      'div',
+      { className: 'content-card__caption flex-column' },
       _react2.default.createElement(
-        "span",
+        'span',
         null,
-        "\u041E \u041A\u041E\u041C\u041F\u0410\u041D\u0418\u0418"
+        '\u041E \u041A\u041E\u041C\u041F\u0410\u041D\u0418\u0418'
       )
     ),
     _react2.default.createElement(
-      "div",
-      { className: "content-card__body flex-column" },
+      'div',
+      { className: 'content-card__body flex-column' },
       _react2.default.createElement(
-        "h2",
-        { className: "page-title" },
-        "\u041E \u041A\u041E\u041C\u041F\u0410\u041D\u0418\u0418"
+        'h2',
+        { className: 'page-title' },
+        '\u041E \u041A\u041E\u041C\u041F\u0410\u041D\u0418\u0418'
       ),
       _react2.default.createElement(
-        "div",
-        { className: "scrolled-content" },
+        'div',
+        { className: 'scrolled-content' },
         _react2.default.createElement(
-          "p",
-          { className: "page-paragraph" },
-          "\xAB\u0427\u0438\u0441\u0442\u043E\u0414\u0410\xBB - \u044D\u0442\u043E \u043C\u043E\u043B\u043E\u0434\u0430\u044F, \u0434\u0438\u043D\u0430\u043C\u0438\u0447\u043D\u043E \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u044E\u0449\u0430\u044F\u0441\u044F, \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F. \u0412\u044B\u043F\u043E\u043B\u043D\u044F\u0435\u043C \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0435 \u0432\u0438\u0434\u044B \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u044B \u0434\u043B\u044F \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043A\u0430\u043A \u0441 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438, \u0442\u0430\u043A \u0438 \u0441 \u044E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438 \u043B\u0438\u0446\u0430\u043C\u0438. \u041A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043D\u0430\u0448\u0435\u0439 \u0440\u0430\u0431\u043E\u0442\u044B, \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0434\u0445\u043E\u0434 \u043A \u043A\u043B\u0438\u0435\u043D\u0442\u0443 \u0432\u0430\u0441 \u043F\u0440\u0438\u044F\u0442\u043D\u043E \u0443\u0434\u0438\u0432\u044F\u0442! \u041A\u0432\u0430\u043B\u0438\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439 \u0448\u0442\u0430\u0442 \u043D\u0430\u0448\u0438\u0445 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442 \u0440\u0430\u0431\u043E\u0442\u0443 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E \u043E\u0442 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0430 \u0438 \u043F\u043B\u043E\u0449\u0430\u0434\u0438 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u0438 \u0432 \u0441\u0440\u043E\u043A! \u0412\u044B \u043E\u0441\u0442\u0430\u043D\u0435\u0442\u0435\u0441\u044C \u0434\u043E\u0432\u043E\u043B\u044C\u043D\u044B!"
+          'p',
+          { className: 'page-paragraph' },
+          '\xAB\u0427\u0438\u0441\u0442\u043E\u0414\u0410\xBB - \u044D\u0442\u043E \u043C\u043E\u043B\u043E\u0434\u0430\u044F, \u0434\u0438\u043D\u0430\u043C\u0438\u0447\u043D\u043E \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u044E\u0449\u0430\u044F\u0441\u044F, \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F. \u0412\u044B\u043F\u043E\u043B\u043D\u044F\u0435\u043C \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0435 \u0432\u0438\u0434\u044B \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u0438 \u0432\u0441\u0435\u0433\u0434\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u044B \u0434\u043B\u044F \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u043A\u0430\u043A \u0441 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438, \u0442\u0430\u043A \u0438 \u0441 \u044E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u043C\u0438 \u043B\u0438\u0446\u0430\u043C\u0438. \u041A\u0430\u0447\u0435\u0441\u0442\u0432\u043E \u043D\u0430\u0448\u0435\u0439 \u0440\u0430\u0431\u043E\u0442\u044B, \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u044B\u0439 \u043F\u043E\u0434\u0445\u043E\u0434 \u043A \u043A\u043B\u0438\u0435\u043D\u0442\u0443 \u0432\u0430\u0441 \u043F\u0440\u0438\u044F\u0442\u043D\u043E \u0443\u0434\u0438\u0432\u044F\u0442! \u041A\u0432\u0430\u043B\u0438\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0439 \u0448\u0442\u0430\u0442 \u043D\u0430\u0448\u0438\u0445 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432 \u0432\u044B\u043F\u043E\u043B\u043D\u0438\u0442 \u0440\u0430\u0431\u043E\u0442\u0443 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u043E\u0433\u043E \u0443\u0440\u043E\u0432\u043D\u044F \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E \u043E\u0442 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0430 \u0438 \u043F\u043B\u043E\u0449\u0430\u0434\u0438 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u0438 \u0432 \u0441\u0440\u043E\u043A! \u0412\u044B \u043E\u0441\u0442\u0430\u043D\u0435\u0442\u0435\u0441\u044C \u0434\u043E\u0432\u043E\u043B\u044C\u043D\u044B!'
         ),
         _react2.default.createElement(
-          "p",
-          { className: "page-paragraph" },
-          "\u0421\u0435\u0433\u043E\u0434\u043D\u044F, \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u044F \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u043D\u0443\u044E \u0443\u0431\u043E\u0440\u043A\u0443 \u043B\u044E\u0431\u043E\u0433\u043E \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F, \u0431\u0435\u0437 \u0443\u0441\u043B\u0443\u0433 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0439 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438 \u043F\u043E\u0447\u0442\u0438 \u043D\u0435 \u043E\u0431\u043E\u0439\u0442\u0438\u0441\u044C. \u0412\u0435\u0434\u044C \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u0440\u0443\u0435\u0442 \u0432\u0430\u043C \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E, \u044D\u043A\u043E\u043D\u043E\u043C\u0438\u044E \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u0438 \u0441\u0440\u0435\u0434\u0441\u0442\u0432. \u041C\u044B \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C, \u0430 \u0432\u044B \u043E\u0442\u0434\u044B\u0445\u0430\u0435\u0442\u0435! \u0414\u043B\u044F \u043D\u0430\u0447\u0430\u043B\u0430 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0432\u0430\u043C \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435 \u0438\u043B\u0438 \u043F\u043E \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0443 56-77-46 \u0438 \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C \u043D\u0430\u0441 \u0441 \u0444\u0440\u043E\u043D\u0442\u043E\u043C \u0440\u0430\u0431\u043E\u0442. \u0423 \u043D\u0430\u0441 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442 \u043D\u0430\u0434\u0435\u0436\u043D\u044B\u0435 \u043B\u044E\u0434\u0438, \u0430 \u0432 \u0443\u0431\u043E\u0440\u043A\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0435 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435 \u0438 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u044B\u0435 \u0445\u0438\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430. \u041C\u044B \u0437\u0430 \u0447\u0438\u0441\u0442\u044B\u0435 \u0436\u0438\u0437\u043D\u0435\u043D\u043D\u044B\u0435 \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u0430! \u041F\u0440\u0435\u0434\u043B\u0430\u0433\u0430\u0435\u043C\u044B\u0439 \u043D\u0430\u043C\u0438 \u0441\u043F\u0435\u043A\u0442\u0440 \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D \u043F\u043E \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u043E\u043C\u0443 \u0437\u0430\u043A\u0430\u0437\u0443 \u043A\u043B\u0438\u0435\u043D\u0442\u0430."
+          'p',
+          { className: 'page-paragraph' },
+          '\u0421\u0435\u0433\u043E\u0434\u043D\u044F, \u043F\u043B\u0430\u043D\u0438\u0440\u0443\u044F \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u043D\u0443\u044E \u0443\u0431\u043E\u0440\u043A\u0443 \u043B\u044E\u0431\u043E\u0433\u043E \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F, \u0431\u0435\u0437 \u0443\u0441\u043B\u0443\u0433 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0439 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438 \u043F\u043E\u0447\u0442\u0438 \u043D\u0435 \u043E\u0431\u043E\u0439\u0442\u0438\u0441\u044C. \u0412\u0435\u0434\u044C \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u0430\u044F \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u0440\u0443\u0435\u0442 \u0432\u0430\u043C \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u043E, \u044D\u043A\u043E\u043D\u043E\u043C\u0438\u044E \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u0438 \u0441\u0440\u0435\u0434\u0441\u0442\u0432. \u041C\u044B \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C, \u0430 \u0432\u044B \u043E\u0442\u0434\u044B\u0445\u0430\u0435\u0442\u0435! \u0414\u043B\u044F \u043D\u0430\u0447\u0430\u043B\u0430 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430 \u0432\u0430\u043C \u0434\u043E\u0441\u0442\u0430\u0442\u043E\u0447\u043D\u043E \u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435 \u0438\u043B\u0438 \u043F\u043E \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0443 56-77-46 \u0438 \u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C \u043D\u0430\u0441 \u0441 \u0444\u0440\u043E\u043D\u0442\u043E\u043C \u0440\u0430\u0431\u043E\u0442. \u0423 \u043D\u0430\u0441 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442 \u043D\u0430\u0434\u0435\u0436\u043D\u044B\u0435 \u043B\u044E\u0434\u0438, \u0430 \u0432 \u0443\u0431\u043E\u0440\u043A\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0435 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435 \u0438 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u044B\u0435 \u0445\u0438\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0430. \u041C\u044B \u0437\u0430 \u0447\u0438\u0441\u0442\u044B\u0435 \u0436\u0438\u0437\u043D\u0435\u043D\u043D\u044B\u0435 \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u0430! \u041F\u0440\u0435\u0434\u043B\u0430\u0433\u0430\u0435\u043C\u044B\u0439 \u043D\u0430\u043C\u0438 \u0441\u043F\u0435\u043A\u0442\u0440 \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D \u043F\u043E \u0438\u043D\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u043E\u043C\u0443 \u0437\u0430\u043A\u0430\u0437\u0443 \u043A\u043B\u0438\u0435\u043D\u0442\u0430.'
         ),
         _react2.default.createElement(
-          "h3",
-          null,
-          "\u041E\u0441\u043D\u043E\u0432\u043D\u044B\u0435 \u0432\u0438\u0434\u044B \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438"
-        ),
-        _react2.default.createElement(
-          "div",
-          null,
+          'div',
+          { className: 'page-section' },
           _react2.default.createElement(
-            "p",
-            { className: "list-title" },
-            "\u0423\u0431\u043E\u0440\u043A\u0430:"
+            'h3',
+            null,
+            '\u041E\u0441\u043D\u043E\u0432\u043D\u044B\u0435 \u0432\u0438\u0434\u044B \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438'
           ),
           _react2.default.createElement(
-            "ul",
-            null,
+            'p',
+            { className: 'list-title' },
+            '\u0423\u0431\u043E\u0440\u043A\u0430:'
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'page-list' },
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u0439 (\u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044E\u0449\u0430\u044F, \u0433\u0435\u043D\u0435\u0440\u0430\u043B\u044C\u043D\u0430\u044F, \u043F\u043E\u0441\u043B\u0435 \u0440\u0435\u043C\u043E\u043D\u0442\u0430, \u043F\u043E\u0441\u043B\u0435 \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430)"
+              '\u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u0439 (\u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044E\u0449\u0430\u044F, \u0433\u0435\u043D\u0435\u0440\u0430\u043B\u044C\u043D\u0430\u044F, \u043F\u043E\u0441\u043B\u0435 \u0440\u0435\u043C\u043E\u043D\u0442\u0430, \u043F\u043E\u0441\u043B\u0435 \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430)'
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u043F\u0440\u0438\u043B\u0435\u0433\u0430\u044E\u0449\u0435\u0439 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0438"
+              '\u043F\u0440\u0438\u043B\u0435\u0433\u0430\u044E\u0449\u0435\u0439 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0438'
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u043E\u0444\u0438\u0441\u043E\u0432"
+              '\u043E\u0444\u0438\u0441\u043E\u0432'
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u043A\u0432\u0430\u0440\u0442\u0438\u0440"
+              '\u043A\u0432\u0430\u0440\u0442\u0438\u0440'
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u0434\u043E\u043C\u043E\u0432, \u043A\u043E\u0442\u0442\u0435\u0434\u0436\u0435\u0439, \u0442\u0430\u0443\u043D\u0445\u0430\u0443\u0441\u043E\u0432"
+              '\u0434\u043E\u043C\u043E\u0432, \u043A\u043E\u0442\u0442\u0435\u0434\u0436\u0435\u0439, \u0442\u0430\u0443\u043D\u0445\u0430\u0443\u0441\u043E\u0432'
             )
           ),
           _react2.default.createElement(
-            "p",
-            { className: "list-title" },
-            "\u041C\u043E\u0439\u043A\u0430:"
+            'p',
+            { className: 'list-title' },
+            '\u041C\u043E\u0439\u043A\u0430:'
           ),
           _react2.default.createElement(
-            "ul",
-            null,
+            'ul',
+            { className: 'page-list' },
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u0432\u0438\u0442\u0440\u0430\u0436\u0435\u0439"
+              '\u0432\u0438\u0442\u0440\u0430\u0436\u0435\u0439'
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u043E\u043A\u043E\u043D"
+              '\u043E\u043A\u043E\u043D'
             ),
             _react2.default.createElement(
-              "li",
+              'li',
               null,
-              "\u0441\u0442\u0435\u043A\u043B\u0430"
+              '\u0441\u0442\u0435\u043A\u043B\u0430'
             )
           ),
           _react2.default.createElement(
-            "p",
-            { className: "list-title" },
-            "\u0421\u0442\u0440\u0438\u0436\u043A\u0430 \u0433\u0430\u0437\u043E\u043D\u043E\u0432"
+            'p',
+            { className: 'list-title' },
+            '\u0421\u0442\u0440\u0438\u0436\u043A\u0430 \u0433\u0430\u0437\u043E\u043D\u043E\u0432'
           ),
           _react2.default.createElement(
-            "p",
-            { className: "list-title" },
-            "\u0414\u0440\u0443\u0433\u043E\u0435 (\u043F\u043E \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0435\u043D\u043D\u043E\u0441\u0442\u0438)"
+            'ul',
+            { className: 'page-list' },
+            _react2.default.createElement(
+              'li',
+              null,
+              '\u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0433\u0430\u0437\u043E\u043D\u043E\u043A\u043E\u0441\u0438\u043B\u043A\u0438'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '\u0431\u0435\u043D\u0437\u0438\u043D\u043E\u0432\u044B\u0435 \u0433\u0430\u0437\u043E\u043D\u043E\u043A\u0430\u0441\u0438\u043B\u043A\u0438'
+            )
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'list-title' },
+            '\u0414\u0440\u0443\u0433\u043E\u0435 (\u043F\u043E \u0434\u043E\u0433\u043E\u0432\u043E\u0440\u0435\u043D\u043D\u043E\u0441\u0442\u0438)'
+          ),
+          _react2.default.createElement(
+            'ul',
+            { className: 'page-list' },
+            _react2.default.createElement(
+              'li',
+              null,
+              '\u0421\u043F\u0438\u0441\u043E\u043A \u043F\u0440\u0435\u0434\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u043C\u044B\u0445 \u0443\u0441\u043B\u0443\u0433 \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E \u0440\u0430\u0441\u0448\u0438\u0440\u044F\u0435\u0442\u0441\u044F'
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              '\u0417\u0432\u043E\u043D\u0438\u0442\u0435! \u0414\u043E\u0433\u043E\u0432\u043E\u0440\u0438\u043C\u0441\u044F!'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'p',
+            { className: 'page-paragraph' },
+            '\u0421\u0435\u0433\u043E\u0434\u043D\u044F, \u043F\u043E\u0442\u0440\u0435\u0431\u043D\u043E\u0441\u0442\u044C \u0432 \u043A\u043B\u0438\u043D\u0438\u043D\u0433\u043E\u0432\u044B\u0445 \u0443\u0441\u043B\u0443\u0433\u0430\u0445 \u044D\u0442\u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E\u0441\u0442\u044C \u0434\u043B\u044F \u043C\u043D\u043E\u0433\u0438\u0445 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0438\u0445 \u0438 \u044E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u0445 \u043B\u0438\u0446, \u0432\u0435\u0434\u044C \u0441\u0442\u0440\u043E\u044F\u0442\u0441\u044F \u043D\u043E\u0432\u044B\u0435 \u0442\u043E\u0440\u0433\u043E\u0432\u044B\u0435 \u0446\u0435\u043D\u0442\u0440\u044B, \u0437\u0434\u0430\u043D\u0438\u044F, \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u044E\u0442\u0441\u044F \u0442\u043E\u0440\u0433\u043E\u0432\u044B\u0435 \u043F\u043B\u043E\u0449\u0430\u0434\u043A\u0438, \u043F\u043E\u044F\u0432\u043B\u044F\u044E\u0442\u043C\u044F \u043D\u043E\u0432\u044B\u0435 \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B, \u0442\u0440\u0435\u0431\u0443\u044E\u0449\u0438\u0435 \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u043E\u0434\u0445\u043E\u0434\u0430. \u0411\u0435\u0448\u0435\u043D\u044B\u0439 \u0440\u0438\u0442\u043C \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0436\u0438\u0437\u043D\u0438 \u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0441\u043E\u0432\u0441\u0435\u043C \u043D\u0435\u043C\u043D\u043E\u0433\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u0434\u043B\u044F \u043F\u0440\u0438\u044F\u0442\u043D\u043E\u0433\u043E \u043E\u0442\u0434\u044B\u0445\u0430, \u0430 \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u043D\u0430 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u0443\u044E \u0443\u0431\u043E\u0440\u043A\u0443 \u0441\u0432\u043E\u0435\u0433\u043E \u0434\u043E\u043C\u0430 \u043F\u043E\u0440\u043E\u0439 \u043D\u0435 \u043E\u0441\u0442\u0430\u0435\u0442\u0441\u044F \u0432\u043E\u0432\u0441\u0435. \u041C\u044B \u0442\u0430 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0433\u043E\u0442\u043E\u0432\u0430 \u043F\u043E\u043C\u043E\u0447\u044C \u0432\u0430\u043C \u0432 \u043B\u044E\u0431\u044B\u0445 \u0436\u0438\u0437\u043D\u0435\u043D\u043D\u044B\u0445 \u0441\u0438\u0442\u0443\u0430\u0446\u0438\u044F\u0445!'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'page-paragraph' },
+            '\u041C\u044B \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u0441 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u043C\u0438 \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F\u043C\u0438. \u042D\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C, \u043A\u0430\u043A \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u0430\u044F \u0438\u043B\u0438 \u043F\u0440\u043E\u0441\u0442\u043E\u0440\u043D\u0430\u044F \u043A\u0432\u0430\u0440\u0442\u0438\u0440\u0430, \u043E\u0444\u0438\u0441, \u0431\u0438\u0437\u043D\u0435\u0441-\u0446\u0435\u043D\u0442\u0440 \u0438\u043B\u0438 \u0434\u043E\u043C. \u041E\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043B\u044F\u0435\u043C \u0443\u0431\u043E\u0440\u043A\u0443 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u0439, \u0430 \u0438\u043C\u0435\u043D\u043D\u043E \u0434\u0432\u043E\u0440\u043E\u0432, \u043F\u0430\u0440\u043A\u043E\u0432, \u0441\u043A\u0432\u0435\u0440\u043E\u0432, \u0442\u0440\u043E\u0442\u0443\u0430\u0440\u043E\u0432, \u0434\u0435\u0442\u0441\u043A\u0438\u0445 \u0438 \u0441\u043F\u043E\u0440\u0442\u0438\u0432\u043D\u044B\u0445 \u043F\u043B\u043E\u0449\u0430\u0434\u043E\u043A, \u0432 \u0442\u043E\u043C \u0447\u0438\u0441\u043B\u0435 \u0441\u0442\u0440\u0438\u0436\u043A\u0443 \u0433\u0430\u0437\u043E\u043D\u043E\u0432. \u0422\u0430\u043A\u0436\u0435 \u0432 \u043D\u0430\u0448\u0438 \u0443\u0441\u043B\u0443\u0433\u0438 \u0432\u0445\u043E\u0434\u0438\u0442 \u0447\u0438\u0441\u0442\u043A\u0430 \u0441\u0442\u0435\u043A\u043E\u043B, \u043E\u043A\u043E\u043D, \u0432\u0438\u0442\u0440\u0430\u0436\u0435\u0439, \u0437\u0435\u0440\u043A\u0430\u043B \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u044F. \u0412 \u0437\u0438\u043C\u043D\u0435\u0435 \u0432\u0440\u0435\u043C\u044F \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E \u043E\u0447\u0438\u0449\u0430\u0442\u044C \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044E \u043E\u0442 \u0441\u043D\u0435\u0433\u0430 \u0438 \u043D\u0430\u043B\u0435\u0434\u0438. \u041F\u0440\u0438 \u043F\u043E\u043C\u043E\u0449\u0438 \u043C\u043E\u0449\u043D\u044B\u0445, \u043D\u043E \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u044B\u0445 \u0430\u043D\u0442\u0438\u0433\u043E\u043B\u043E\u043B\u0435\u0434\u043D\u044B\u0445 \u0440\u0435\u0430\u0433\u0435\u043D\u0442\u043E\u0432 \u043C\u044B \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u043E\u0447\u0438\u0441\u0442\u0438\u043C \u0442\u0440\u043E\u0442\u0443\u0430\u0440\u043D\u0443\u044E \u043F\u043B\u0438\u0442\u043A\u0443, \u0434\u043E\u0440\u043E\u0436\u043A\u0438 \u0438 \u0442\u043E\u043C\u0443 \u043F\u043E\u0434\u043E\u0431\u043D\u043E \u043F\u043E \u0432\u0430\u0448\u0435\u0439 \u0437\u0430\u044F\u0432\u043A\u0435.'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'page-paragraph' },
+            '\u041E\u0437\u043D\u0430\u043A\u043E\u043C\u044C\u0442\u0435\u0441\u044C \u0441 \u043F\u0440\u0430\u0439\u0441\u043E\u043C \u043D\u0430\u0448\u0438\u0445 \u0443\u0441\u043B\u0443\u0433. \u041C\u044B \u043E\u0440\u0438\u0435\u043D\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u044B \u043D\u0430 \u043A\u043B\u0438\u0435\u043D\u0442\u0430 \u0438 \u0437\u0430\u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043E\u0432\u0430\u043D\u044B \u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0443\u0441\u043B\u0443\u0433\u0438 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E, \u043E\u043F\u0435\u0440\u0430\u0442\u0438\u0432\u043D\u043E \u0438 \u043F\u043E \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C \u0446\u0435\u043D\u0430\u043C.'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'quick-access' },
+          _react2.default.createElement(
+            'ul',
+            { className: 'quick-access__list' },
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/prices' },
+                '\u041F\u0420\u0410\u0419\u0421'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/feedbacks' },
+                '\u041E\u0422\u0417\u042B\u0412\u042B'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/done' },
+                '\u041D\u0410\u0428\u0410 \u0420\u0410\u0411\u041E\u0422\u0410'
+              )
+            ),
+            _react2.default.createElement(
+              'li',
+              null,
+              _react2.default.createElement(
+                _reactRouterDom.NavLink,
+                { to: '/contacts' },
+                '\u041A\u041E\u041D\u0422\u0410\u041A\u0422\u042B'
+              )
+            )
           )
         )
       )
@@ -11594,6 +11696,14 @@ var _react2 = _interopRequireDefault(_react);
 
 var _ = __webpack_require__(64);
 
+var _menu = __webpack_require__(96);
+
+var _menu2 = _interopRequireDefault(_menu);
+
+var _menuExtra = __webpack_require__(95);
+
+var _menuExtra2 = _interopRequireDefault(_menuExtra);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11617,7 +11727,8 @@ var Main = function (_Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Main.__proto__ || Object.getPrototypeOf(Main)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            route: _this.props.route
+            route: _this.props.route,
+            quickMenu: {}
         }, _this.handleContent = function () {
             switch (_this.state.route) {
                 case 'services':
@@ -11629,7 +11740,7 @@ var Main = function (_Component) {
                 case 'blog':
                     return _react2.default.createElement(_.Blog, null);
                 case 'about':
-                    return _react2.default.createElement(_.About, null);
+                    return _react2.default.createElement(_.About, _this.state.quickMenu);
                 case 'contacts':
                     return _react2.default.createElement(_.Contacts, null);
                 case 'prices':
@@ -11641,6 +11752,19 @@ var Main = function (_Component) {
     }
 
     _createClass(Main, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            var quickMenu = {};
+            _menu2.default.map(function (item) {
+                return quickMenu[item.alias] = item.link;
+            });
+            _menuExtra2.default.map(function (item) {
+                return quickMenu[item.alias] = item.link;
+            });
+
+            this.setState({ quickMenu: quickMenu });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -11730,7 +11854,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var baseURL = 'http://fotokray.ru/api';
+var baseURL = 'http://chistoda.local/api';
+// const baseURL = 'http://fotokray.ru/api';
 
 var loadPrice = function loadPrice() {
     return fetch(baseURL + '/price').then(function (res) {
@@ -14250,7 +14375,7 @@ exports = module.exports = __webpack_require__(125)(undefined);
 
 
 // module
-exports.push([module.i, "#root,\n#root > div {\n  height: 100%;\n}\n.App {\n  height: 100%;\n}\n.App .header {\n  padding-top: 15px;\n}\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n#header-logo {\n  padding: 0 15px;\n  background-color: #760B0E;\n}\n#header-logo img {\n  width: 250px;\n  height: 100px;\n}\n#header-phone {\n  position: relative;\n  width: 350px;\n  min-width: 350px;\n  height: 98px;\n  padding-top: 2px;\n  color: #fff;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n}\n#header-phone .number {\n  font-size: 35px;\n  line-height: 35px;\n  font-weight: 700;\n  /*text-shadow: 1px 1px 5px rgba(0,0,0,0.3);*/\n}\n#header-phone .free-call {\n  font-size: 14px;\n  padding-bottom: 10px;\n}\n#header-phone .callback span {\n  font-weight: 700;\n  padding: 5px;\n  font-size: 16px;\n}\n#header-phone .callback a {\n  color: #fff;\n}\n#header-phone .callback a:hover,\n#header-phone .callback a:focus {\n  text-decoration: none;\n  color: #760B0E;\n}\n#header-phone .phone-popup {\n  position: absolute;\n  width: 300px;\n  right: -300px;\n  top: -8px;\n  padding: 8px;\n  background: #fff;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n  border: 1px solid gray;\n  color: #333333;\n  text-align: center;\n}\n#header-phone .phone-popup .phone-popup__header {\n  font-size: 28px;\n  font-weight: 500;\n  margin: 0;\n}\n#header-phone .phone-popup .phone-popup__title {\n  background: #760B0E;\n  color: #fff;\n  font-weight: bold;\n  margin: 8px 0;\n}\n#header-phone .phone-popup .phone-popup__list {\n  list-style-type: none;\n  padding: 0;\n  text-align: left;\n}\n#header-phone .phone-popup .phone-popup__number {\n  font-size: 20px;\n  font-weight: 500;\n}\n#header-phone .phone-popup .phone-popup__person {\n  font-style: italic;\n  padding-left: 20px;\n}\n#header-phone .phone-popup hr {\n  margin: 8px 0;\n}\n#header-phone .phone-popup .phone-popup__message {\n  margin-bottom: 5px;\n}\n#header-phone .phone-popup .popup-buttons {\n  margin-top: 15px;\n}\n#header-phone .phone-popup .popup-buttons a {\n  border: none;\n  height: 22px;\n  width: 100px;\n  display: inline-block;\n  margin: 0 5px;\n  background: rgba(0, 0, 0, 0.8);\n  font-size: 15px;\n  font-weight: bold;\n  color: white;\n}\n#header-phone .phone-popup .popup-buttons a:hover {\n  text-decoration: none;\n  cursor: pointer;\n  background: #760B0E;\n}\n#phone-info {\n  position: absolute;\n  top: -5px;\n  right: 5px;\n  color: #760B0E;\n  cursor: pointer;\n}\n#tool-menu {\n  width: 100%;\n  height: 50px;\n  margin-left: 15px;\n  background-color: rgba(146, 146, 146, 0.8);\n}\n#tool-menu .icon-menu {\n  color: #fff;\n  padding: 0 10px;\n}\n#tool-menu .icon-menu-item {\n  color: #fff;\n  padding: 0 20px;\n  display: flex;\n  align-items: center;\n}\n#tool-menu .icon-menu-item span {\n  padding-left: 5px;\n}\n#tool-menu a.icon-menu-item:hover,\n#tool-menu a.icon-menu-item:focus {\n  text-decoration: none;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n  color: #760B0E;\n}\n#content {\n  max-height: 100%;\n  max-width: 100%;\n  flex-basis: 100%;\n}\n#content-wrapper {\n  min-width: 960px;\n  max-width: 960px;\n  padding: 50px 15px 15px;\n}\n#content-wrapper .content-card {\n  height: 100%;\n  border: 1px solid gray;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n}\n#content-wrapper .content-card__caption {\n  width: 24px;\n  flex-shrink: 0;\n  justify-content: center;\n  line-height: 23px;\n  z-index: 20;\n  background: #760B0E;\n}\n#content-wrapper .content-card__caption span {\n  transform: rotate(-90deg);\n  white-space: nowrap;\n  align-self: center;\n  color: white;\n  font-weight: bold;\n  font-size: 16px;\n}\n#content-wrapper .content-card__body {\n  width: 100%;\n  background: rgba(255, 255, 255, 0.8);\n  padding: 15px;\n}\n#content-wrapper .content-card__body h2.page-title {\n  color: #760B0E;\n  border-bottom: 1px solid #760B0E;\n  text-align: right;\n  text-transform: uppercase;\n}\n#content-wrapper .content-card__body .page-paragraph {\n  text-align: justify;\n  padding: 15px;\n  margin: 0;\n}\n#content-wrapper .content-card__body .scrolled-content {\n  overflow-y: auto;\n}\n#content-wrapper .content-card.services .tab-hedear {\n  height: 35px;\n  width: 100%;\n  margin-bottom: 20px;\n}\n#content-wrapper .content-card.services .tab-header_item {\n  flex-basis: 50%;\n  text-align: center;\n  font-size: 20px;\n  line-height: 35px;\n}\n#content-wrapper .content-card.services .tab-header_item:first-child {\n  border-bottom: 2px solid #760B0E;\n}\n#nav {\n  align-self: center;\n  padding: 0 15px;\n}\n#nav .nav_menu-link {\n  background-color: rgba(118, 11, 14, 0.8);\n}\n#nav .nav_menu-link a:nth-child(even) {\n  background-color: rgba(118, 11, 14, 0.9);\n}\n#nav .nav_menu-link a {\n  display: block;\n  width: 150px;\n  height: 60px;\n  line-height: 60px;\n  text-transform: uppercase;\n  font-size: 20px;\n  color: white;\n  text-align: center;\n}\n#nav .nav_menu-link a:hover,\n#nav .nav_menu-link a:focus {\n  text-decoration: none;\n  background-color: #760B0E;\n  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);\n  line-height: 58px;\n}\n#nav .nav_extra-link {\n  height: 26px;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n#nav .nav_extra-link a {\n  color: #fff;\n}\n#nav .nav_extra-link a:hover,\n#nav .nav_extra-link a:focus {\n  text-decoration: none;\n  color: #b2b2b2;\n}\n#nav-vert {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  height: 100%;\n}\n#nav-vert .nav_main-link,\n#nav-vert .nav_extra-link {\n  height: initial;\n}\n#nav-vert a {\n  display: block;\n  width: 150px;\n  height: 35px;\n  background: rgba(0, 0, 0, 0.8);\n  font-size: 18px;\n  line-height: 35px;\n  padding-left: 15px;\n  color: white;\n  text-transform: capitalize;\n}\n#nav-vert a:hover {\n  text-decoration: none;\n  border-right: 5px solid #760B0E;\n}\n#nav-vert a.active {\n  background-color: #760B0E;\n}\n#nav-vert .nav-vert_separator {\n  height: 10px;\n  width: 100%;\n  background: rgba(0, 0, 0, 0.8);\n}\n#news .news-block {\n  margin: 15px 15px 15px 0;\n  padding: 8px 15px;\n  width: 325px;\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n}\n#news .news-block .news-block_title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#news .news-item {\n  position: relative;\n  padding: 5px 0;\n}\n#news .news-item img {\n  width: 80px;\n  height: 80px;\n  position: absolute;\n  border: 1px solid #b2b2b2;\n}\n#news .news-item .news-item_title {\n  height: 80px;\n  margin-left: 80px;\n  padding-left: 10px;\n}\n#news .icon-news {\n  cursor: pointer;\n}\n#news .icon-news:hover {\n  border: 1px solid;\n  border-radius: 50%;\n}\n@media (max-width: 1280px) {\n  #news .news-block {\n    width: 135px;\n  }\n  #news .news-item {\n    text-align: center;\n  }\n  #news .news-item img {\n    position: relative;\n  }\n  #news .news-item_title {\n    display: none;\n  }\n}\n@media (max-width: 1100px) {\n  #news {\n    display: none;\n  }\n}\n#footer {\n  height: 50px;\n  flex-shrink: 0;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n#content-wrapper .page-contacts .content-card__body {\n  padding: 0;\n}\n.page-contacts .bg-map {\n  background: url(" + __webpack_require__(140) + ") 100% 100% no-repeat;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n}\n.page-contacts .contacts-info__wrapper {\n  width: 400px;\n  height: 100%;\n  padding: 15px;\n}\n.page-contacts .contacts-info__wrapper .contacts-info {\n  background-color: rgba(255, 255, 255, 0.8);\n  padding: 8px 0;\n  border: 1px solid;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n  border: 1px solid gray;\n}\n.page-contacts .contacts-info__wrapper .info-title {\n  font-size: 30px;\n  font-weight: 500;\n  text-align: right;\n  color: #760B0E;\n  border-bottom: 1px solid #760B0E;\n  margin: 8px;\n}\n.page-contacts .contacts-info__wrapper .info-info {\n  list-style: none;\n  padding-left: 20px;\n}\n.page-contacts .contacts-info__wrapper .info-info li,\n.page-contacts .contacts-info__wrapper .info-info a {\n  font-weight: 500;\n  font-size: 18px;\n  color: #505050;\n}\n.page-contacts .contacts-info__wrapper .info-info a {\n  display: flex;\n}\n.page-contacts .contacts-info__wrapper .info-info svg {\n  margin-right: 10px;\n}\n.page-prices .price-download {\n  margin-bottom: 15px;\n}\n.page-prices .price-download h2 {\n  font-size: 20px;\n  color: #505050;\n  border-bottom: 1px solid #760B0E;\n  margin: 0;\n  padding-bottom: 5px;\n}\n.page-prices .price-download a {\n  text-decoration: none;\n  color: white;\n  padding: 0 15px;\n  font-weight: bold;\n  background: #760B0E;\n}\n.padding-bottom-15 {\n  padding-bottom: 15px;\n}\n", ""]);
+exports.push([module.i, "#root,\n#root > div {\n  height: 100%;\n}\n.App {\n  height: 100%;\n}\n.App .header {\n  padding-top: 15px;\n}\n@keyframes App-logo-spin {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n#header-logo {\n  padding: 0 15px;\n  background-color: #760B0E;\n}\n#header-logo img {\n  width: 250px;\n  height: 100px;\n}\n#header-phone {\n  position: relative;\n  width: 350px;\n  min-width: 350px;\n  height: 98px;\n  padding-top: 2px;\n  color: #fff;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n}\n#header-phone .number {\n  font-size: 35px;\n  line-height: 35px;\n  font-weight: 700;\n  /*text-shadow: 1px 1px 5px rgba(0,0,0,0.3);*/\n}\n#header-phone .free-call {\n  font-size: 14px;\n  padding-bottom: 10px;\n}\n#header-phone .callback span {\n  font-weight: 700;\n  padding: 5px;\n  font-size: 16px;\n}\n#header-phone .callback a {\n  color: #fff;\n}\n#header-phone .callback a:hover,\n#header-phone .callback a:focus {\n  text-decoration: none;\n  color: #760B0E;\n}\n#header-phone .phone-popup {\n  position: absolute;\n  width: 300px;\n  right: -300px;\n  top: -8px;\n  padding: 8px;\n  background: #fff;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n  border: 1px solid gray;\n  color: #333333;\n  text-align: center;\n}\n#header-phone .phone-popup .phone-popup__header {\n  font-size: 28px;\n  font-weight: 500;\n  margin: 0;\n}\n#header-phone .phone-popup .phone-popup__title {\n  background: #760B0E;\n  color: #fff;\n  font-weight: bold;\n  margin: 8px 0;\n}\n#header-phone .phone-popup .phone-popup__list {\n  list-style-type: none;\n  padding: 0;\n  text-align: left;\n}\n#header-phone .phone-popup .phone-popup__number {\n  font-size: 20px;\n  font-weight: 500;\n}\n#header-phone .phone-popup .phone-popup__person {\n  font-style: italic;\n  padding-left: 20px;\n}\n#header-phone .phone-popup hr {\n  margin: 8px 0;\n}\n#header-phone .phone-popup .phone-popup__message {\n  margin-bottom: 5px;\n}\n#header-phone .phone-popup .popup-buttons {\n  margin-top: 15px;\n}\n#header-phone .phone-popup .popup-buttons a {\n  border: none;\n  height: 22px;\n  width: 100px;\n  display: inline-block;\n  margin: 0 5px;\n  background: rgba(0, 0, 0, 0.8);\n  font-size: 15px;\n  font-weight: bold;\n  color: white;\n}\n#header-phone .phone-popup .popup-buttons a:hover {\n  text-decoration: none;\n  cursor: pointer;\n  background: #760B0E;\n}\n#phone-info {\n  position: absolute;\n  top: -5px;\n  right: 5px;\n  color: #760B0E;\n  cursor: pointer;\n}\n#tool-menu {\n  width: 100%;\n  height: 50px;\n  margin-left: 15px;\n  background-color: rgba(146, 146, 146, 0.8);\n}\n#tool-menu .icon-menu {\n  color: #fff;\n  padding: 0 10px;\n}\n#tool-menu .icon-menu-item {\n  color: #fff;\n  padding: 0 20px;\n  display: flex;\n  align-items: center;\n}\n#tool-menu .icon-menu-item span {\n  padding-left: 5px;\n}\n#tool-menu a.icon-menu-item:hover,\n#tool-menu a.icon-menu-item:focus {\n  text-decoration: none;\n  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);\n  color: #760B0E;\n}\n#content {\n  max-height: 100%;\n  max-width: 100%;\n  flex-basis: 100%;\n}\n#content-wrapper {\n  min-width: 960px;\n  max-width: 960px;\n  padding: 30px 15px 15px;\n}\n#content-wrapper .content-card {\n  height: 100%;\n  border: 1px solid gray;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n}\n#content-wrapper .content-card__caption {\n  width: 24px;\n  flex-shrink: 0;\n  justify-content: center;\n  line-height: 23px;\n  z-index: 20;\n  background: #760B0E;\n}\n#content-wrapper .content-card__caption span {\n  transform: rotate(-90deg);\n  white-space: nowrap;\n  align-self: center;\n  color: white;\n  font-weight: bold;\n  font-size: 16px;\n}\n#content-wrapper .content-card__body {\n  width: 100%;\n  background: rgba(255, 255, 255, 0.8);\n  padding: 15px;\n}\n#content-wrapper .content-card__body h2.page-title {\n  color: #760B0E;\n  border-bottom: 1px solid #760B0E;\n  text-align: right;\n  text-transform: uppercase;\n}\n#content-wrapper .content-card__body .page-paragraph {\n  text-align: justify;\n  padding: 15px;\n  margin: 0;\n}\n#content-wrapper .content-card__body .scrolled-content {\n  overflow-y: auto;\n}\n#content-wrapper .content-card__body .page-section {\n  margin: 8px;\n  padding: 15px;\n  background: antiquewhite;\n  border: 1px solid #760B0E;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n}\n#content-wrapper .content-card__body .list-title {\n  margin: 0 0 8px;\n  padding: 0 8px;\n  background: #760B0E;\n  color: white;\n  font-weight: bold;\n}\n#content-wrapper .content-card__body .page-list {\n  list-style-type: circle;\n}\n#content-wrapper .content-card__body .quick-access__list {\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n  margin: 15px 10px;\n  background: rgba(0, 0, 0, 0.8);\n  height: 50px;\n  list-style: none;\n  padding: 0;\n}\n#content-wrapper .content-card__body .quick-access__list a {\n  color: white;\n  font-weight: bold;\n  text-decoration: none;\n}\n#content-wrapper .content-card__body .quick-access__list a:hover {\n  color: #b2b2b2;\n}\n#content-wrapper .content-card.services .tab-hedear {\n  height: 35px;\n  width: 100%;\n  margin-bottom: 20px;\n}\n#content-wrapper .content-card.services .tab-header_item {\n  flex-basis: 50%;\n  text-align: center;\n  font-size: 20px;\n  line-height: 35px;\n}\n#content-wrapper .content-card.services .tab-header_item:first-child {\n  border-bottom: 2px solid #760B0E;\n}\n#nav {\n  align-self: center;\n  padding: 0 15px;\n}\n#nav .nav_menu-link {\n  background-color: rgba(118, 11, 14, 0.8);\n}\n#nav .nav_menu-link a:nth-child(even) {\n  background-color: rgba(118, 11, 14, 0.9);\n}\n#nav .nav_menu-link a {\n  display: block;\n  width: 150px;\n  height: 60px;\n  line-height: 60px;\n  text-transform: uppercase;\n  font-size: 20px;\n  color: white;\n  text-align: center;\n}\n#nav .nav_menu-link a:hover,\n#nav .nav_menu-link a:focus {\n  text-decoration: none;\n  background-color: #760B0E;\n  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);\n  line-height: 58px;\n}\n#nav .nav_extra-link {\n  height: 26px;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n#nav .nav_extra-link a {\n  color: #fff;\n}\n#nav .nav_extra-link a:hover,\n#nav .nav_extra-link a:focus {\n  text-decoration: none;\n  color: #b2b2b2;\n}\n#nav-vert {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  height: 100%;\n}\n#nav-vert .nav_main-link,\n#nav-vert .nav_extra-link {\n  height: initial;\n}\n#nav-vert a {\n  display: block;\n  width: 150px;\n  height: 35px;\n  background: rgba(0, 0, 0, 0.8);\n  font-size: 18px;\n  line-height: 35px;\n  padding-left: 15px;\n  color: white;\n  text-transform: capitalize;\n}\n#nav-vert a:hover {\n  text-decoration: none;\n  border-right: 5px solid #760B0E;\n}\n#nav-vert a.active {\n  background-color: #760B0E;\n}\n#nav-vert .nav-vert_separator {\n  height: 10px;\n  width: 100%;\n  background: rgba(0, 0, 0, 0.8);\n}\n#news .news-block {\n  margin: 15px 15px 15px 0;\n  padding: 8px 15px;\n  width: 325px;\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n}\n#news .news-block .news-block_title {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#news .news-item {\n  position: relative;\n  padding: 5px 0;\n}\n#news .news-item img {\n  width: 80px;\n  height: 80px;\n  position: absolute;\n  border: 1px solid #b2b2b2;\n}\n#news .news-item .news-item_title {\n  height: 80px;\n  margin-left: 80px;\n  padding-left: 10px;\n}\n#news .icon-news {\n  cursor: pointer;\n}\n#news .icon-news:hover {\n  border: 1px solid;\n  border-radius: 50%;\n}\n@media (max-width: 1280px) {\n  #news .news-block {\n    width: 135px;\n  }\n  #news .news-item {\n    text-align: center;\n  }\n  #news .news-item img {\n    position: relative;\n  }\n  #news .news-item_title {\n    display: none;\n  }\n}\n@media (max-width: 1100px) {\n  #news {\n    display: none;\n  }\n}\n#footer {\n  height: 50px;\n  flex-shrink: 0;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n#content-wrapper .page-contacts .content-card__body {\n  padding: 0;\n}\n.page-contacts .bg-map {\n  background: url(" + __webpack_require__(140) + ") 100% 100% no-repeat;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n}\n.page-contacts .contacts-info__wrapper {\n  width: 400px;\n  height: 100%;\n  padding: 15px;\n}\n.page-contacts .contacts-info__wrapper .contacts-info {\n  background-color: rgba(255, 255, 255, 0.8);\n  padding: 8px 0;\n  border: 1px solid;\n  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);\n  border: 1px solid gray;\n}\n.page-contacts .contacts-info__wrapper .info-title {\n  font-size: 30px;\n  font-weight: 500;\n  text-align: right;\n  color: #760B0E;\n  border-bottom: 1px solid #760B0E;\n  margin: 8px;\n}\n.page-contacts .contacts-info__wrapper .info-info {\n  list-style: none;\n  padding-left: 20px;\n}\n.page-contacts .contacts-info__wrapper .info-info li,\n.page-contacts .contacts-info__wrapper .info-info a {\n  font-weight: 500;\n  font-size: 18px;\n  color: #505050;\n}\n.page-contacts .contacts-info__wrapper .info-info a {\n  display: flex;\n}\n.page-contacts .contacts-info__wrapper .info-info svg {\n  margin-right: 10px;\n}\n.page-prices .price-download {\n  margin-bottom: 15px;\n}\n.page-prices .price-download h2 {\n  font-size: 20px;\n  color: #505050;\n  border-bottom: 1px solid #760B0E;\n  margin: 0;\n  padding-bottom: 5px;\n}\n.page-prices .price-download a {\n  text-decoration: none;\n  color: white;\n  padding: 0 15px;\n  font-weight: bold;\n  background: #760B0E;\n}\n.padding-bottom-15 {\n  padding-bottom: 15px;\n}\n", ""]);
 
 // exports
 
