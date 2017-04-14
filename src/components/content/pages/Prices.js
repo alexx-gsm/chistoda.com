@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Price } from './';
 
-const baseURL = 'http://chistoda.local/api';
-// const baseURL = 'http://fotokray.ru/api';
+// const baseURL = 'http://chistoda.local/api';
+const baseURL = 'http://fotokray.ru/api';
 
 const loadPrice = () => {
     return fetch(`${baseURL}/price`)
