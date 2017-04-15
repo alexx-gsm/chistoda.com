@@ -7,18 +7,17 @@ import menu from './../nav/menu.json';
 import menuExtra from './../nav/menu-extra.json';
 
 export default class Main extends Component {
-    state = {
-        route: this.props.route,
-        quickMenu: {}
-    };
+    constructor(props) {
+        super(props);
 
-    componentDidMount() {
         let quickMenu = {};
-        menu.map(item => quickMenu[item.alias] = item.link);
-        menuExtra.map(item => quickMenu[item.alias] = item.link);
-
-        this.setState({quickMenu});
-    }
+        menu.map(item       => quickMenu[item.alias] = item.link);
+        menuExtra.map(item  => quickMenu[item.alias] = item.link);
+        this.state = {
+            route: this.props.route,
+            quickMenu: quickMenu
+        }
+    };
 
     handleContent = () => {
         switch (this.state.route) {

@@ -1,9 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export const About = (quickMenu) => {
-console.log(quickMenu.price);
-  return (
+export const About = (quickMenu) => (
     <div className="page-about content-card flex-row">
       <div className="content-card__caption flex-column">
         <span>О КОМПАНИИ</span>
@@ -74,11 +72,10 @@ console.log(quickMenu.price);
 
           <div className="quick-access">
             <ul className="quick-access__list">
-              {/*<li><NavLink activeClassName="active" to={quickMenu.price}>ПРАЙС</NavLink></li>*/}
-              <li><NavLink to='/prices'>ПРАЙС</NavLink></li>
-              <li><NavLink to='/feedbacks'>ОТЗЫВЫ</NavLink></li>
-              <li><NavLink to='/done'>НАША РАБОТА</NavLink></li>
-              <li><NavLink to='/contacts'>КОНТАКТЫ</NavLink></li>
+              <li><NavLink to={quickMenu.price}>ПРАЙС</NavLink></li>
+              <li><NavLink to={quickMenu.feedbacks}>ОТЗЫВЫ</NavLink></li>
+              <li><NavLink to={quickMenu.done}>НАША РАБОТА</NavLink></li>
+              <li><NavLink to={quickMenu.contacts}>КОНТАКТЫ</NavLink></li>
             </ul>
           </div>
 
@@ -86,6 +83,4 @@ console.log(quickMenu.price);
         {/* <!--END SCROLL -->*/}
       </div>
     </div>
-
-  )
-};
+);
