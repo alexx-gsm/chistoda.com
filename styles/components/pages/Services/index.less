@@ -1,0 +1,105 @@
+@import '../../../vars';
+@import '../../../mixins';
+
+.tab-content { padding-right: 15px; }
+.tab-hedear {
+    height: 35px;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+.tab-header_item {
+    flex-basis: 50%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 35px;
+
+    &.active {
+        border-bottom: 2px solid @color-main-crimson;
+    }
+    &:not(.active) {
+        cursor: pointer;
+    }
+}
+
+.service-detail {
+    .service-detail__title {
+        color: @color-main-crimson;
+        border-bottom: 1px solid @color-main-crimson;
+        margin-right: 10px;
+        text-align: right;
+        text-transform: uppercase;
+    }
+}
+
+.tab-content-wrapper {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding-top: 100px;
+    padding-bottom: 10px;
+
+
+    .service-list {
+        list-style-type: none;
+        padding: 0;
+        position: absolute;
+        top: 55px;
+        display: flex;
+        justify-content: space-around;
+
+        li { margin-right: 15px; }
+        a {
+            font-size: 14px;
+            color: @color-main-text;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    }
+    .tab-content {
+        height: 100%;
+        overflow-x: auto;
+    }
+
+    h4 {
+        background: @color-main-crimson;
+        color: white;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        margin: 0;
+    }
+
+    p, a, td, th, li {font-family: 'Roboto Slab', serif;}
+
+    table {
+        thead {
+            th {
+                border: none;
+                border-bottom: 2px solid @color-main-crimson;
+                padding-bottom: 0;
+            }
+            th:first-of-type { text-align: right; }
+        }
+        tbody {
+            td {border: none; padding-bottom: 0;}
+            td:first-of-type { text-align: right; }
+            td:last-of-type {
+                border-bottom: 1px solid @color-main-crimson;
+            }
+        }
+        tfoot {
+            color: @color-main-crimson;
+            td { border: none; }
+            svg {
+                position: relative;
+                top: -8px;
+            }
+            p {
+                font-size: 12px;
+
+            }
+        }
+    }
+}

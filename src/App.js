@@ -27,7 +27,8 @@ class App extends Component {
                             <Route path="/contacts"     render={() => <Content route="contacts"/>} />
                             <Route path="/about"        render={() => <Content route="about"/>} />
                             <Route path="/done"         render={() => <Content route="done"/>} />
-                            <Route path="/prices"        render={() => <Content route="prices"/>} />
+                            <Route path="/prices"       render={() => <Content route="prices"/>} />
+                            <Route path="/foto-gallery" render={() => <Content route="foto-gallery"/>} />
                         </div>
                     </Router>
 

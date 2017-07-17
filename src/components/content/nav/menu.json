@@ -7,9 +7,9 @@
   },
   {
     "_id": 2,
-    "title": "каталог",
-    "alias": "catalog",
-    "link": "/catalog"
+    "title": "фотогалерея",
+    "alias": "foto-gallery",
+    "link": "/foto-gallery"
   },
   {
     "_id": 3,

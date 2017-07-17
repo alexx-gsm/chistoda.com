@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Services, Catalog, FeedBacks, Blog,
-  Contacts, About, Prices
+    Services, Catalog, FeedBacks, Blog,
+    Contacts, About, Prices, FotoGallery
 } from './';
+
 import menu from './../nav/menu.json';
 import menuExtra from './../nav/menu-extra.json';
 
@@ -13,6 +14,7 @@ export default class Main extends Component {
         let quickMenu = {};
         menu.map(item       => quickMenu[item.alias] = item.link);
         menuExtra.map(item  => quickMenu[item.alias] = item.link);
+        console.log('---', quickMenu);
         this.state = {
             route: this.props.route,
             quickMenu: quickMenu
@@ -23,6 +25,8 @@ export default class Main extends Component {
         switch (this.state.route) {
             case 'services':
                 return <Services/>;
+            case 'foto-gallery':
+                return <FotoGallery/>;
             case 'catalog':
                 return <Catalog/>;
             case 'feedbacks':

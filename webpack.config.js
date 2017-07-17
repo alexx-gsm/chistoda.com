@@ -38,13 +38,13 @@ module.exports = {
               exclude: [/node_modules/],
               loader: 'babel-loader',
           }, {
-              test: /\.css$/,
-              use: ['style-loader', 'css-loader', 'postcss-loader']
-          }, {
-              test: /\.less$/,
-              use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader']
-          },
-          {
+          //     test: /\.css$/,
+          //     use: ['style-loader', 'css-loader', 'postcss-loader']
+          // }, {
+          //     test: /\.less$/,
+          //     use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader']
+          // },
+          // {
             test: /\.(jpe?g|png|gif|svg)$/i,
             use: [
                 "file-loader?name=images/img-[hash:6].[ext]"
