@@ -14,7 +14,6 @@ export default class Main extends Component {
         let quickMenu = {};
         menu.map(item       => quickMenu[item.alias] = item.link);
         menuExtra.map(item  => quickMenu[item.alias] = item.link);
-        console.log('---', quickMenu);
         this.state = {
             route: this.props.route,
             quickMenu: quickMenu

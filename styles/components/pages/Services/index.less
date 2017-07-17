@@ -55,6 +55,8 @@
             color: @color-main-text;
             font-style: italic;
             text-decoration: underline;
+
+            &:hover { color: @color-main-crimson; }
         }
     }
     .tab-content {
@@ -63,43 +65,77 @@
     }
 
     h4 {
-        background: @color-main-crimson;
+        //background: @color-main-crimson;
         color: white;
         font-size: 16px;
         line-height: 24px;
         text-align: center;
-        margin: 0;
     }
 
     p, a, td, th, li {font-family: 'Roboto Slab', serif;}
 
+    .short-price {
+        .inner-page-section;
+        margin-bottom: 25px;
+    }
     table {
+        margin: 0;
         thead {
             th {
                 border: none;
                 border-bottom: 2px solid @color-main-crimson;
                 padding-bottom: 0;
             }
-            th:first-of-type { text-align: right; }
+            th:first-of-type { text-align: right; padding-right: 15px; }
         }
         tbody {
+            tr { vertical-align: baseline; }
             td {border: none; padding-bottom: 0;}
-            td:first-of-type { text-align: right; }
+            td:first-of-type { text-align: right; padding-right: 15px; }
             td:last-of-type {
                 border-bottom: 1px solid @color-main-crimson;
+            }
+            td span {
+                font-size: 30px;
+                line-height: 30px;
+            }
+            a {
+                color: @color-main-text;
+
+                &:hover { color: @color-main-crimson; }
             }
         }
         tfoot {
             color: @color-main-crimson;
             td { border: none; }
-            svg {
-                position: relative;
-                top: -8px;
-            }
-            p {
-                font-size: 12px;
 
+
+        }
+    }
+
+
+    #general-cleaning {
+        .inner-page-section(@bg-color: @color-11; @color: darken(@color-11, 50%););
+        margin-bottom: 25px;
+    }
+    #complex-cleaning {
+        .inner-page-section(@bg-color: @color-13; @color: darken(@color-13, 50%););
+        margin-bottom: 25px;
+    }
+    #post-cleaning {
+        .inner-page-section(@bg-color: @color-08; @color: darken(@color-08, 50%););
+        margin-bottom: 25px;
+    }
+
+    .our-guaranty > div {
+        .inner-page-section(@bg-color: @color-15; @color: darken(@color-15, 50%););
+        margin-bottom: 25px;
+
+        .our-guaranty__message {
+            svg {
+                flex-shrink: 0;
             }
+            p { padding-left: 10px; }
         }
     }
 }
