@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import QuickAccessMenu from './components/QuickAccessMenu';
 
-export const About = (quickMenu) => (
+
+export const About = () => (
     <div className="page-about content-card flex-row">
       <div className="content-card__caption flex-column">
         <span>О КОМПАНИИ</span>
@@ -70,14 +71,7 @@ export const About = (quickMenu) => (
               заинтересованы оказывать услуги качественно, оперативно и по доступным ценам.</p>
           </div>
 
-          <div className="quick-access">
-            <ul className="quick-access__list">
-              <li><NavLink to={quickMenu.price}>ПРАЙС</NavLink></li>
-              <li><NavLink to={quickMenu.feedbacks}>ОТЗЫВЫ</NavLink></li>
-              <li><NavLink to={quickMenu.done}>НАША РАБОТА</NavLink></li>
-              <li><NavLink to={quickMenu.contacts}>КОНТАКТЫ</NavLink></li>
-            </ul>
-          </div>
+          <QuickAccessMenu/>
 
         </div>
         {/* <!--END SCROLL -->*/}

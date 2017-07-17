@@ -127,15 +127,24 @@
         margin-bottom: 25px;
     }
 
-    .our-guaranty > div {
-        .inner-page-section(@bg-color: @color-15; @color: darken(@color-15, 50%););
-        margin-bottom: 25px;
+    .our-guaranty {
+        position: relative;
 
-        .our-guaranty__message {
-            svg {
-                flex-shrink: 0;
+        & > div {
+            .inner-page-section(@bg-color: @color-15; @color: darken(@color-15, 50%););
+            margin-bottom: 25px;
+
+            .our-guaranty__message {
+                svg {
+                    flex-shrink: 0;
+                }
+                p { padding-left: 10px; }
             }
-            p { padding-left: 10px; }
+        }
+        .guaranty-stamp {
+            justify-content: center;
+            position: absolute;
+            bottom: -25px;
         }
     }
 }

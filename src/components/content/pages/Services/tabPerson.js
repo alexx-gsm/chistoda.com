@@ -1,4 +1,5 @@
 import React from 'react';
+import QuickAccessMenu from './../components/QuickAccessMenu';
 import FaExclamation from 'react-icons/lib/fa/exclamation';
 import FaRouble from 'react-icons/lib/fa/rouble';
 import FaCheck from 'react-icons/lib/fa/check';
@@ -144,7 +145,14 @@ const TabPerson = () =>
                             </p>
                         </div>
                     </div>
+                    <span className="guaranty-stamp flex-row">
+                        <img src="images/stamp.png" alt="Гарантия качества"/>
+                    </span>
                 </div>
+
+
+
+                <QuickAccessMenu/>
             </div>
         </div>
     </div>

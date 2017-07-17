@@ -4,19 +4,13 @@ import {
     Contacts, About, Prices, FotoGallery
 } from './';
 
-import menu from './../nav/menu.json';
-import menuExtra from './../nav/menu-extra.json';
 
 export default class Main extends Component {
     constructor(props) {
         super(props);
 
-        let quickMenu = {};
-        menu.map(item       => quickMenu[item.alias] = item.link);
-        menuExtra.map(item  => quickMenu[item.alias] = item.link);
         this.state = {
-            route: this.props.route,
-            quickMenu: quickMenu
+            route: this.props.route
         }
     };
 
@@ -33,7 +27,7 @@ export default class Main extends Component {
             case 'blog':
                 return <Blog/>;
             case 'about':
-              return <About {...this.state.quickMenu}/>;
+              return <About/>;
             case 'contacts':
                 return <Contacts/>;
             case 'prices':
